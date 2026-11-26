@@ -119,7 +119,8 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var
   .nav a.nl::after{content:"→";font-family:var(--font-mono);color:var(--on-graphite-muted)}
   .nav a.nl[aria-current="page"]{color:var(--molten)}
 }
-@media (max-width:420px){.nav .sq-btn{padding:10px 12px;font-size:12px}}
+@media (max-width:480px){.mb-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.menu-btn{padding:12px 4px 12px 12px}.nav{gap:var(--space-3)}}
+@media (max-width:420px){.nav .sq-btn{padding:10px 12px;font-size:12px}.logo svg{width:112px}}
 @media (max-width:480px){.hero .meta{gap:var(--space-2) var(--space-4);font-size:11.5px}.hero .ctas .sq-btn{flex:1 1 auto;justify-content:center}}
 @media (prefers-reduced-motion: reduce){.menu-btn i b{transition:none}}
 @media (max-width:600px){.logo svg{width:124px}}
@@ -269,6 +270,16 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 .fcols a:hover{color:var(--on-graphite)}
 .fbase{border-top:1px solid var(--graphite-line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-3);padding-block:var(--space-6);font:400 12px/16px var(--font-mono);letter-spacing:.04em;text-transform:uppercase}
 @media (max-width:640px){.fcols{flex-wrap:wrap;gap:var(--space-8)}.fcols>div:first-child{flex:1 1 100%}.fcols>div:not(:first-child){flex:1 1 40%;min-width:0}}
+/* phone tuning (keep last) */
+@media (max-width:480px){
+  .display{font-size:30px;line-height:1.05}
+  h1{font-size:28px}
+  h2{font-size:22px}
+  .hero .meta{display:grid;grid-template-columns:1fr 1fr;gap:10px var(--space-4)}
+  .locs{grid-template-columns:1fr 1fr;gap:10px var(--space-3)}
+  .locs li{white-space:normal;font-size:13px;letter-spacing:.04em}
+  .ct .sq-card{padding:var(--space-6)}
+}
 </style>
 </head>
 <body>
@@ -285,7 +296,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
       <li><a class="nl" href="#about" data-nav="about">About</a></li>
     </ul>
     <a class="sq-btn sq-btn--secondary sq-btn--on-graphite" href="#quote" data-nav="quote">Request a quote</a>
-    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><i aria-hidden="true"><b></b><b></b><b></b></i>Menu</button>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><i aria-hidden="true"><b></b><b></b><b></b></i><span class="mb-t">Menu</span></button>
   </div>
 </header>
 
@@ -297,7 +308,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <canvas id="grid" aria-hidden="true"></canvas>
     <div class="wrap">
       <p class="sq-eyebrow sq-eyebrow--on-graphite">Industrial partner</p>
-      <h1 class="display"><span class="ln">Engineering supply</span> <span class="ln">and services</span> <span class="ln">for critical industry.</span></h1>
+      <h1 class="display"><span class="ln">Engineering supply</span> <span class="ln">and services for</span> <span class="ln">critical industry.</span></h1>
       <p class="lead">We make, maintain and supply the parts and services that heavy industry depends on.</p>
       <div class="ctas">
         <a class="sq-btn sq-btn--primary" href="#quote">Request a quote</a>
