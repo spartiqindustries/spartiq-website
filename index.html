@@ -694,9 +694,9 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
         </form>
         <div class="done" id="r-done" hidden>
           <h3>Thank you.</h3>
-          <p class="small">Your request is summarised below. Click Email request to send it to hello@spartiq.com, and attach your drawings to that email.</p>
+          <p class="small">Your request is summarised below. Click Email request to send it to sales@spartiq.com, and attach your drawings to that email.</p>
           <pre id="r-sum"></pre>
-          <div class="row"><a class="sq-btn sq-btn--primary" id="r-mail" href="mailto:hello@spartiq.com">Email request</a><button class="sq-btn sq-btn--secondary" type="button" id="r-copy">Copy request</button><button class="sq-btn sq-btn--secondary" type="button" id="r-edit">Edit</button></div>
+          <div class="row"><a class="sq-btn sq-btn--primary" id="r-mail" href="mailto:sales@spartiq.com">Email request</a><button class="sq-btn sq-btn--secondary" type="button" id="r-copy">Copy request</button><button class="sq-btn sq-btn--secondary" type="button" id="r-edit">Edit</button></div>
         </div>
       </div>
     </div>
@@ -718,8 +718,8 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
   <section>
     <div class="wrap">
       <div class="grid2 ct">
-        <div class="sq-card"><p class="sq-eyebrow">Enquiries</p><b class="mail">hello@spartiq.com</b><p class="sq-card__body">General, supply, services and consulting enquiries.</p></div>
-        <div class="sq-card"><p class="sq-eyebrow">Offices</p><b>New York · London · Jeddah · Bengaluru</b><p class="sq-card__body">Meetings by appointment.</p></div>
+        <div class="sq-card"><p class="sq-eyebrow">Enquiries</p><b class="mail">sales@spartiq.com</b><p class="sq-card__body">General, supply, services and consulting enquiries.</p></div>
+        <div class="sq-card"><p class="sq-eyebrow">Locations</p><b>United States · United Kingdom · India · Saudi Arabia</b><p class="sq-card__body">Meetings by appointment.</p></div>
       </div>
     </div>
   </section>
@@ -803,7 +803,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     if(fi.files.length) lines.push('Files: '+[].map.call(fi.files,function(x){return x.name}).join(', '));
     if(g('r-msg')) lines.push('Message: '+g('r-msg'));
     document.getElementById('r-sum').textContent=lines.join('\n');
-    document.getElementById('r-mail').href='mailto:hello@spartiq.com?subject='+encodeURIComponent('RFQ - '+g('r-co'))+'&body='+encodeURIComponent(lines.join('\n')+'\n\n(Please attach your drawings to this email.)');
+    document.getElementById('r-mail').href='mailto:sales@spartiq.com?subject='+encodeURIComponent('RFQ - '+g('r-co'))+'&body='+encodeURIComponent(lines.join('\n')+'\n\n(Please attach your drawings to this email.)');
     f.hidden=true; done.hidden=false;
   });
   document.getElementById('r-edit').addEventListener('click',function(){done.hidden=true;f.hidden=false});
