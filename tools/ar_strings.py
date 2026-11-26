@@ -73,6 +73,8 @@ T = {
 "Components made by qualified partners in India and inspected by our engineers before dispatch, for customers in the United States, the United Kingdom, Europe and the Gulf.": "مكوّنات يصنّعها شركاء معتمدون في الهند ويفحصها مهندسونا قبل الشحن، لعملائنا في الولايات المتحدة والمملكة المتحدة وأوروبا والخليج.",
 "We quote to the drawing, qualify and audit the supplier, manage production and inspection, and ship to spec.": "نسعّر وفق الرسومات، ونؤهّل المورّد وندقّقه، وندير الإنتاج والفحص، ونشحن وفق المواصفات.",
 "You receive the part, not the problem.": "تستلم القطعة، لا المشكلة.",
+"You receive the part,": "تستلم القطعة،",
+"not the problem.": "لا المشكلة.",
 "How we work": "طريقة عملنا",
 "From quotation to delivery,": "من عرض السعر إلى التسليم،",
 "on one record.": "في سجل واحد.",
