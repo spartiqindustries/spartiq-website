@@ -96,6 +96,8 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var
 .logo svg{width:146px;height:auto}
 #site-nav{display:flex;align-items:center;align-self:stretch;gap:32px;list-style:none;margin:0 0 0 auto;padding:0}
 .nav a.nl,.dd-btn{font:600 13px/1 var(--font-display);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--on-graphite-muted);padding-block:8px;border-bottom:2px solid transparent}
+.nav a.nl,.dd-btn{display:inline-flex;align-items:center;margin:0;line-height:1;box-sizing:border-box;height:34px}
+#site-nav>li{display:flex;align-items:center;align-self:stretch}
 .nav a.nl:hover,.nav a.nl[aria-current="page"],.dd-btn:hover,.dd-btn.current,.dd.open .dd-btn{color:var(--on-graphite)}
 .nav a.nl[aria-current="page"],.dd-btn.current{border-bottom-color:var(--molten)}
 .nav .sq-btn{padding:11px 18px;font-size:13px}
