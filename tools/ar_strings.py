@@ -5,6 +5,7 @@
 T = {
 "Spartiq | Contract manufacturing, industrial services, distribution and consulting": "Spartiq | التصنيع التعاقدي والخدمات الصناعية والتوزيع ودخول الأسواق",
 "Spartiq home": "الصفحة الرئيسية لـ Spartiq",
+"Language": "اللغة",
 "Contract manufacturing": "التصنيع التعاقدي",
 "Industrial services": "الخدمات الصناعية",
 "Distribution": "التوزيع",

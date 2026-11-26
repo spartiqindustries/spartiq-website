@@ -272,11 +272,14 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 .fcols a:hover{color:var(--on-graphite)}
 .fbase{border-top:1px solid var(--graphite-line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-3);padding-block:var(--space-6);font:400 12px/16px var(--font-mono);letter-spacing:.04em;text-transform:uppercase}
 @media (max-width:640px){.fcols{flex-wrap:wrap;gap:var(--space-8)}.fcols>div:first-child{flex:1 1 100%}.fcols>div:not(:first-child){flex:1 1 40%;min-width:0}}
-/* language switch */
-.lang{font:500 15px/1 "IBM Plex Sans Arabic","IBM Plex Sans",sans-serif;color:var(--on-graphite-muted);text-decoration:none;white-space:nowrap;padding:8px 0}
-.lang:hover{color:var(--on-graphite)}
-#site-nav>li.lang-li{display:none}
-@media (max-width:1200px){.lang{display:none}#site-nav>li.lang-li{display:block}}
+/* language toggle, fixed on the side */
+.lang-toggle{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;background:var(--graphite);border:1px solid var(--graphite-line);border-right:0}
+.lang-toggle a{display:block;min-width:48px;padding:12px 10px;text-align:center;text-decoration:none;color:var(--on-graphite-muted);font:600 13px/1 "Chakra Petch","IBM Plex Sans Arabic",sans-serif;letter-spacing:.08em}
+.lang-toggle a[lang="ar"]{font:600 15px/1 "IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
+.lang-toggle a+a{border-top:1px solid var(--graphite-line)}
+.lang-toggle a:hover{color:var(--on-graphite)}
+.lang-toggle a.on{background:var(--molten);color:var(--on-molten)}
+@media (max-width:480px){.lang-toggle{top:auto;bottom:16px;transform:none}.lang-toggle a{min-width:42px;padding:10px 8px}}
 /* phone tuning (keep last) */
 @media (max-width:480px){
   .display{font-size:30px;line-height:1.05}
@@ -290,8 +293,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 
 /* ===== Arabic / RTL ===== */
 :root{--font-display:"IBM Plex Sans Arabic","Chakra Petch",sans-serif;--font-sans:"IBM Plex Sans Arabic","IBM Plex Sans",sans-serif;--font-mono:"IBM Plex Sans Arabic","IBM Plex Mono",monospace}
-html[lang="ar"] body *{letter-spacing:0!important;text-transform:none!important}
-html[lang="ar"] .lang{font-family:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif}
+html[lang="ar"] body *:not(.lang-toggle a[lang="en"]){letter-spacing:0!important;text-transform:none!important}
 .sq-route,.sq-card__spec code,.spec code,.ct .mail{direction:ltr;unicode-bidi:isolate}
 .logo,footer svg{direction:ltr}
 .hero canvas{transform:scaleX(-1)}
@@ -308,6 +310,7 @@ html[lang="ar"] .lang{font-family:"IBM Plex Sans","Helvetica Neue",Arial,sans-se
 h1,h2,h3{line-height:1.25}
 .display{line-height:1.2}
 .big{line-height:1.7}
+.lang-toggle{right:auto;left:0;border-right:1px solid var(--graphite-line);border-left:0}
 .nav a.nl{font-size:15px}
 .nav .sq-btn,.sq-btn{font-size:15px}
 .sq-eyebrow,.crumb,.sq-card__num,.flow .n,.fparent,.fbase,.fcols .t,.hero .meta{font-size:13px}
@@ -325,13 +328,13 @@ h1,h2,h3{line-height:1.25}
       <li><a class="nl" href="#distribution" data-nav="distribution">التوزيع</a></li>
       <li><a class="nl" href="#market-entry" data-nav="market-entry">دخول الأسواق</a></li>
       <li><a class="nl" href="#about" data-nav="about">من نحن</a></li>
-      <li class="lang-li"><a class="nl" href="/" data-lang="/" lang="en" hreflang="en">English</a></li>
     </ul>
-    <a class="lang" href="/" data-lang="/" lang="en" hreflang="en">English</a>
     <a class="sq-btn sq-btn--secondary sq-btn--on-graphite" href="#quote" data-nav="quote">اطلب عرض سعر</a>
     <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><i aria-hidden="true"><b></b><b></b><b></b></i><span class="mb-t">القائمة</span></button>
   </div>
 </header>
+
+<nav class="lang-toggle" aria-label="اللغة"><a href="/" data-lang="/" lang="en" hreflang="en">EN</a><a href="/ar/" data-lang="/ar/" lang="ar" hreflang="ar" class="on" aria-current="true">عربي</a></nav>
 
 <main>
 
