@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17181B">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="en" href="https://www.spartiq.com/">
+<link rel="alternate" hreflang="ar" href="https://www.spartiq.com/ar/">
+<title>Spartiq | التصنيع التعاقدي والخدمات الصناعية والتوزيع ودخول الأسواق</title>
+<meta name="description" content="Spartiq شركة صناعية متخصصة في التصنيع التعاقدي والخدمات والتوزيع والاستشارات، تخدم مشغّلي قطاعات الطاقة والصناعات التحويلية والمرافق.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: the earlier institutional site's pages and content, set in the Spartiq "Forge" design system. Graphite hero with the engineering grid, alternating surface / ash bands, hard edges, hairlines, no shadows; Spartiq Orange as a fill, one highlight per view. */
+:root{
+  --surface:#F7F5F1; --surface-raised:#FFFFFF; --surface-ash:#ECE8E2; --line:#DAD5CC;
+  --ink:#17181B; --ink-muted:#5C5F66;
+  --graphite:#17181B; --on-graphite:#ECE8E2; --on-graphite-muted:#9C978F; --graphite-line:#2E3035; --graphite-raised:#222327;
+  --molten:#FF6600; --on-molten:#17181B; --molten-text:#B04400;
+  --steel:#6B6F76; --error:#A8322B; --focus:#FF6600;
+  --font-display:"Chakra Petch", "Arial Narrow", sans-serif;
+  --font-sans:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px; --space-8:32px; --space-12:48px; --space-18:72px; --space-30:120px;
+  --slant:-12deg;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --surface:#121315; --surface-raised:#1C1D21; --surface-ash:#26272B; --line:#34363B;
+  --ink:#ECE8E2; --ink-muted:#9C978F; --graphite:#0B0C0D; --graphite-line:#25272B; --graphite-raised:#17181B;
+  --molten-text:#FF9A5C; --steel:#8A8F97; --error:#F08A80; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --surface:#121315; --surface-raised:#1C1D21; --surface-ash:#26272B; --line:#34363B;
+  --ink:#ECE8E2; --ink-muted:#9C978F; --graphite:#0B0C0D; --graphite-line:#25272B; --graphite-raised:#17181B;
+  --molten-text:#FF9A5C; --steel:#8A8F97; --error:#F08A80; color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{background:var(--surface);color:var(--ink);font:400 16px/26px var(--font-sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+p{margin:0}
+.wrap{max-width:1248px;margin:0 auto;padding-left:max(24px, env(safe-area-inset-left, 0px));padding-right:max(24px, env(safe-area-inset-right, 0px))}
+.ln{display:inline-block}
+h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;margin:0;text-wrap:balance}
+.display{font-size:clamp(38px,5.6vw,68px);line-height:1;font-weight:700;letter-spacing:.01em}
+h1{font-size:clamp(30px,4.2vw,46px);line-height:1.06;font-weight:700;letter-spacing:.01em}
+h2{font-size:clamp(24px,2.8vw,32px);line-height:1.12;font-weight:700;letter-spacing:.02em}
+h3{font-size:20px;line-height:26px;font-weight:600;letter-spacing:.02em}
+.lead{font-size:20px;line-height:30px;color:var(--ink-muted);max-width:56ch}
+.small{font-size:14px;line-height:22px;color:var(--ink-muted)}
+section{padding-block:var(--space-30)}
+@media (max-width:720px){section{padding-block:var(--space-18)}}
+.ash{background:var(--surface-ash)}
+.gr{background:var(--graphite);color:var(--on-graphite)}
+.gr .lead{color:var(--on-graphite-muted)}
+.head{display:grid;gap:var(--space-3);margin-bottom:var(--space-12);max-width:780px}
+.head .lead{margin-top:var(--space-2)}
+.note{margin-top:var(--space-6)}
+
+/* components (sq-) */
+.sq-btn{display:inline-flex;align-items:center;gap:var(--space-2);font:600 15px/1 var(--font-display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:14px 26px;border:0;border-radius:0;cursor:pointer;background:transparent;color:var(--ink);white-space:nowrap}
+.sq-btn--primary{background:var(--molten);color:var(--on-molten);clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.sq-btn--primary:hover{filter:brightness(1.06)}
+.sq-btn--secondary{box-shadow:inset 0 0 0 2px var(--ink)}
+.sq-btn--secondary:hover{background:var(--surface-ash)}
+.sq-btn--on-graphite.sq-btn--secondary{box-shadow:inset 0 0 0 2px var(--on-graphite);color:var(--on-graphite)}
+.sq-btn--on-graphite.sq-btn--secondary:hover{background:rgba(236,232,226,.08)}
+.sq-btn--link{padding:0;color:var(--molten-text)}
+.sq-btn--link:hover{text-decoration:underline;text-underline-offset:4px}
+.sq-eyebrow{display:inline-flex;align-items:center;gap:var(--space-2);font:500 12px/16px var(--font-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--molten-text);margin:0}
+.sq-eyebrow::before{content:"//";color:var(--molten)}
+.sq-eyebrow--on-graphite{color:var(--on-graphite-muted)}
+.sq-route{display:inline-flex;align-items:center;gap:6px;font:500 12px/16px var(--font-mono);letter-spacing:.04em;padding:6px var(--space-3);background:var(--graphite-raised);color:var(--on-graphite)}
+.sq-route b{font-weight:500;color:var(--molten)}
+.sq-card{background:var(--surface-raised);border-top:2px solid var(--ink);padding:var(--space-6);display:grid;gap:var(--space-3);align-content:start;color:var(--ink)}
+.sq-card__num{font:500 12px/16px var(--font-mono);color:var(--molten-text);letter-spacing:.04em;text-transform:uppercase}
+.sq-card__body{color:var(--ink-muted)}
+.sq-card__spec{font:400 14px/20px var(--font-mono);color:var(--ink-muted);border-top:1px solid var(--line);padding-top:var(--space-3)}
+a.sq-card{text-decoration:none}
+a.sq-card:hover .sq-card__title{color:var(--molten-text)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6)}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-6)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-6)}
+@media (max-width:960px){.grid3,.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid3,.grid4,.grid2{grid-template-columns:1fr}
+  .grid3.ind{grid-template-columns:1fr 1fr;gap:var(--space-3)}
+  .grid3.ind .sq-card{padding:var(--space-4)}
+  .grid3.ind h3{font-size:15px;line-height:20px}}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--graphite)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--graphite);color:var(--on-graphite);border-bottom:1px solid var(--graphite-line)}
+.nav{display:flex;align-items:center;gap:var(--space-8);height:72px;position:relative}
+.logo{display:block;line-height:0;flex:none}
+.logo svg{width:146px;height:auto}
+#site-nav{display:flex;align-items:center;align-self:stretch;gap:26px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav a.nl{font:600 13px/1 var(--font-display);letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;text-decoration:none;color:var(--on-graphite-muted);padding-block:8px;border-bottom:2px solid transparent}
+@media (min-width:1201px){.nav a.nl{display:inline-flex;align-items:center;margin:0;line-height:1;box-sizing:border-box;height:34px}#site-nav>li{display:flex;align-items:center;align-self:stretch}}
+.nav a.nl:hover,.nav a.nl[aria-current="page"]{color:var(--on-graphite)}
+.nav a.nl[aria-current="page"]{border-bottom-color:var(--molten)}
+.nav .sq-btn{padding:11px 18px;font-size:13px}
+.nav .sq-btn[aria-current="page"]{box-shadow:inset 0 0 0 2px var(--molten)}
+.menu-btn{display:none;align-items:center;gap:10px;background:transparent;border:0;color:var(--on-graphite);font:600 13px/1 var(--font-display);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;padding:12px 0 12px 8px;min-height:44px}
+.menu-btn i{display:grid;gap:4px;width:20px}
+.menu-btn i b{display:block;height:2px;background:currentColor;transition:transform .2s,opacity .2s}
+.menu-btn[aria-expanded="true"] i b:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] i b:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] i b:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:1200px){
+  .nav{height:64px;gap:var(--space-4)}
+  .nav .sq-btn{margin-left:auto}
+  .menu-btn{display:inline-flex}
+  #site-nav{position:absolute;left:0;right:0;top:100%;margin:0;flex-direction:column;align-items:stretch;gap:0;background:var(--graphite);border-bottom:1px solid var(--graphite-line);padding:var(--space-2) max(24px, env(safe-area-inset-right, 0px)) var(--space-6) max(24px, env(safe-area-inset-left, 0px));max-height:calc(100dvh - 64px);overflow-y:auto}
+  #site-nav:not(.open){display:none}
+  #site-nav>li{border-bottom:1px solid var(--graphite-line)}
+  .nav a.nl{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:15px;border-bottom:0}
+  .nav a.nl::after{content:"→";font-family:var(--font-mono);color:var(--on-graphite-muted)}
+  .nav a.nl[aria-current="page"]{color:var(--molten)}
+}
+@media (max-width:480px){.mb-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.menu-btn{padding:12px 4px 12px 12px}.nav{gap:var(--space-3)}}
+@media (max-width:420px){.nav .sq-btn{padding:10px 12px;font-size:12px}.logo svg{width:112px}}
+@media (max-width:480px){.hero .meta{gap:var(--space-2) var(--space-4);font-size:11.5px}.hero .ctas .sq-btn{flex:1 1 auto;justify-content:center}}
+@media (prefers-reduced-motion: reduce){.menu-btn i b{transition:none}}
+@media (max-width:600px){.logo svg{width:124px}}
+
+/* home hero */
+.hero{position:relative;overflow:hidden;padding-block:clamp(88px,12vw,160px) clamp(56px,7vw,88px)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative}
+.hero .display{margin:var(--space-6) 0;max-width:18ch}
+.hero .lead{max-width:46ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:var(--space-4);margin-top:var(--space-8)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-8);margin-top:clamp(56px,7vw,96px);padding-top:var(--space-6);border-top:1px solid var(--graphite-line);font:500 13px/16px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--on-graphite-muted)}
+
+/* page header */
+.ph{padding-block:clamp(56px,7vw,96px) clamp(48px,6vw,80px)}
+.crumb{font:500 12px/16px var(--font-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--on-graphite-muted);margin-bottom:var(--space-8)}
+.crumb a{text-decoration:none}
+.crumb a:hover{color:var(--on-graphite)}
+.ph-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-12);align-items:end}
+.ph h1{margin-top:var(--space-4);max-width:22ch}
+.ph .lead{font-size:18px;line-height:28px}
+.ph .sq-btn{margin-top:var(--space-6)}
+.ph .lanes{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-6)}
+@media (max-width:860px){.ph-grid{grid-template-columns:1fr;gap:var(--space-6)}}
+
+/* statement */
+.statement{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:var(--space-12);align-items:start}
+.statement .sq-eyebrow{padding-top:10px}
+.statement .big{font:400 clamp(22px,2.4vw,30px)/1.4 var(--font-sans)}
+@media (max-width:820px){.statement{grid-template-columns:1fr;gap:var(--space-4)}.statement .sq-eyebrow{padding-top:0}}
+
+/* home: four lines */
+.grid4.lines{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lines .sq-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"num title link" ". body body";column-gap:var(--space-6);row-gap:var(--space-2);align-items:baseline;padding:var(--space-8)}
+.lines .sq-card__num{grid-area:num}
+.lines .sq-card__title{grid-area:title;white-space:nowrap}
+.lines .sq-card__body{grid-area:body;font-size:16px;line-height:26px}
+.lines .sq-btn--link{grid-area:link;justify-self:end}
+@media (max-width:760px){.grid4.lines{grid-template-columns:1fr}}
+@media (max-width:420px){.lines .sq-card{grid-template-areas:"num title" ". body" ". link";grid-template-columns:auto minmax(0,1fr)}.lines .sq-card__title{white-space:normal}.lines .sq-btn--link{justify-self:start;margin-top:var(--space-2)}}
+
+/* stages */
+.flow{display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));list-style:none;margin:0;padding:0}
+.flow li{position:relative;padding:var(--space-6) var(--space-6) 0 0;display:grid;gap:var(--space-2);align-content:start;border-top:2px solid var(--ink)}
+.flow li::before{content:"";position:absolute;top:-8px;left:0;width:6px;height:14px;background:var(--molten);transform:skewX(var(--slant))}
+.flow .n{font:500 12px/16px var(--font-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--molten-text)}
+.flow p{color:var(--ink-muted);font-size:15px;line-height:24px}
+.flow.fit li{grid-template-rows:auto auto 1fr auto}
+.flow.fit .sq-btn--link{font-size:13px;margin-top:var(--space-2);justify-self:start}
+.mt-link{margin-top:var(--space-8)}
+@media (max-width:900px){.flow{grid-template-columns:1fr 1fr;row-gap:var(--space-8)}}
+@media (max-width:520px){.flow{grid-template-columns:1fr}}
+
+/* split + lists + spec table */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:var(--space-12);align-items:start}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:var(--space-6)}}
+.list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink);background:var(--surface-raised)}
+.list li{padding:14px var(--space-6) 14px 44px;border-bottom:1px solid var(--line);position:relative}
+.list li::before{content:"";position:absolute;left:var(--space-6);top:20px;width:5px;height:14px;background:var(--molten);transform:skewX(var(--slant))}
+.spec{width:100%;border-collapse:collapse;background:var(--surface-raised);border-top:2px solid var(--ink)}
+.spec th,.spec td{text-align:left;padding:14px var(--space-4);border-bottom:1px solid var(--line);vertical-align:top}
+.spec th{font:500 12px/20px var(--font-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-muted);width:34%}
+.spec td{font-size:15px}
+.spec code{font:400 14px var(--font-mono)}
+.tbl{overflow-x:auto}
+@media (max-width:480px){.spec,.spec tbody,.spec tr,.spec th,.spec td{display:block;width:100%}.spec th{padding-bottom:2px;border-bottom:0}.spec td{padding-top:0}}
+
+/* sectors */
+.sectors{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:var(--space-12);align-items:start}
+.sectors ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
+.sectors li{padding:18px 0 18px 22px;border-bottom:1px solid var(--line);font:600 clamp(17px,1.7vw,21px)/1.2 var(--font-display);letter-spacing:.03em;text-transform:uppercase;position:relative}
+.sectors li::before{content:"";position:absolute;left:2px;top:20px;width:5px;height:14px;background:var(--molten);transform:skewX(var(--slant))}
+.sectors li:nth-child(odd){margin-right:var(--space-6)}
+@media (max-width:820px){.sectors{grid-template-columns:1fr;gap:var(--space-6)}}
+@media (max-width:480px){.sectors ul{grid-template-columns:1fr}.sectors li:nth-child(odd){margin-right:0}}
+
+/* principles */
+.pr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-12)}
+.pr div{display:grid;gap:var(--space-3);border-top:2px solid var(--molten);padding-top:var(--space-6)}
+.pr p{color:var(--on-graphite-muted)}
+@media (max-width:820px){.pr{grid-template-columns:1fr;gap:var(--space-8)}}
+
+/* presence */
+.office b{font:700 24px/1.1 var(--font-display);letter-spacing:.02em;text-transform:uppercase}
+.office span{color:var(--ink-muted)}
+
+/* CTA band */
+.band .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-6)}
+.band h2{max-width:24ch}
+
+/* RFQ */
+.rfq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-12);align-items:start}
+@media (max-width:900px){.rfq{grid-template-columns:1fr}}
+.ticks{list-style:none;margin:var(--space-6) 0 0;padding:0;display:grid;gap:var(--space-3)}
+.ticks li{padding-left:22px;position:relative;color:var(--on-graphite)}
+.ticks li::before{content:"";position:absolute;left:2px;top:6px;width:5px;height:14px;background:var(--molten);transform:skewX(var(--slant))}
+.nxt{margin-top:var(--space-12)}
+.nxt ol{list-style:none;margin:var(--space-4) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4)}
+.nxt li{border-top:1px solid var(--graphite-line);padding-top:var(--space-3);display:grid;gap:4px;font-size:15px;line-height:22px;color:var(--on-graphite-muted)}
+.nxt li b{font:500 12px/16px var(--font-mono);color:var(--molten)}
+@media (max-width:560px){.nxt ol{grid-template-columns:1fr}}
+.panel{background:var(--surface-raised);color:var(--ink);border-top:2px solid var(--molten)}
+.panel .ph2{padding:var(--space-6) var(--space-8);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:var(--space-4);flex-wrap:wrap}
+.panel form,.panel .done{padding:var(--space-6) var(--space-8) var(--space-8);display:grid;gap:18px}
+@media (max-width:480px){.panel .ph2,.panel form,.panel .done{padding-left:var(--space-4);padding-right:var(--space-4)}}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.g-ph{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:var(--space-4)}
+@media (max-width:560px){.g2,.g-ph{grid-template-columns:1fr}}
+.fl{display:grid;gap:6px;font:500 13px/16px var(--font-sans);color:var(--ink-muted)}
+.rq{color:var(--error)}
+.panel input[type=text],.panel input[type=email],.panel input[type=tel],.panel select,.panel textarea{width:100%;font:400 16px var(--font-sans);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:12px}
+.panel textarea{min-height:120px;resize:vertical}
+.panel input:focus,.panel select:focus,.panel textarea:focus{outline:2px solid var(--focus);outline-offset:0;border-color:transparent}
+.upl{position:relative;border:1px dashed var(--steel);background:var(--surface);padding:18px;text-align:center;display:grid;gap:4px;font-size:14px;color:var(--ink-muted)}
+.upl input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.upl b{color:var(--ink);font-weight:600}
+.upl.over{border-color:var(--molten)}
+.cb{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:22px;color:var(--ink-muted)}
+.cb input{flex:none;width:17px;height:17px;margin-top:3px;accent-color:var(--molten)}
+.ferr{color:var(--error);font-size:14px}
+.done pre{white-space:pre-wrap;margin:0;font:400 14px/20px var(--font-mono);background:var(--surface-ash);padding:var(--space-4);max-height:260px;overflow:auto}
+.done .row{display:flex;gap:var(--space-3);flex-wrap:wrap}
+
+/* contact */
+.ct .sq-card{display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-8)}
+.ct .sq-card__body{margin-top:auto;padding-top:var(--space-4);border-top:1px solid var(--line)}
+.ct b{font:700 clamp(20px,2vw,24px)/1.2 var(--font-display);letter-spacing:.02em;word-break:break-word}
+.ct .mail{text-transform:none;user-select:all}
+.locs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px var(--space-6)}
+.locs li{position:relative;padding-left:18px;font:600 clamp(15px,1.4vw,17px)/1.3 var(--font-display);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.locs li::before{content:"";position:absolute;left:2px;top:3px;width:5px;height:14px;background:var(--molten);transform:skewX(var(--slant))}
+@media (max-width:640px){.ct{grid-template-columns:1fr}}
+
+.fcols .flock{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-3) var(--space-4)}
+.flock svg{flex:none}
+.fdiv{width:1px;height:24px;background:var(--graphite-line)}
+.fparent{font:500 12px/16px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--on-graphite-muted)}
+@media (max-width:480px){.fdiv{display:none}.fcols .flock{flex-direction:column;align-items:flex-start;gap:var(--space-2)}}
+.flegal{flex:1 1 100%;margin:0;font:400 12px/18px var(--font-sans);letter-spacing:0;text-transform:none;color:var(--on-graphite-muted);opacity:.8}
+footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;line-height:22px}
+.fcols{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-12);padding-block:var(--space-12) var(--space-8)}
+.fcols>div:first-child{flex:0 1 520px}
+.fcols>div:not(:first-child){flex:none;min-width:180px}
+.fcols div{display:grid;gap:var(--space-2);align-content:start}
+.fcols .t{font:500 12px/24px var(--font-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--on-graphite);margin-bottom:var(--space-2)}
+.fcols a{text-decoration:none}
+.fcols a:hover{color:var(--on-graphite)}
+.fbase{border-top:1px solid var(--graphite-line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-3);padding-block:var(--space-6);font:400 12px/16px var(--font-mono);letter-spacing:.04em;text-transform:uppercase}
+@media (max-width:640px){.fcols{flex-wrap:wrap;gap:var(--space-8)}.fcols>div:first-child{flex:1 1 100%}.fcols>div:not(:first-child){flex:1 1 40%;min-width:0}}
+/* language switch */
+.lang{font:500 15px/1 "IBM Plex Sans Arabic","IBM Plex Sans",sans-serif;color:var(--on-graphite-muted);text-decoration:none;white-space:nowrap;padding:8px 0}
+.lang:hover{color:var(--on-graphite)}
+#site-nav>li.lang-li{display:none}
+@media (max-width:1200px){.lang{display:none}#site-nav>li.lang-li{display:block}}
+/* phone tuning (keep last) */
+@media (max-width:480px){
+  .display{font-size:30px;line-height:1.05}
+  h1{font-size:28px}
+  h2{font-size:22px}
+  .hero .meta{display:grid;grid-template-columns:1fr 1fr;gap:10px var(--space-4)}
+  .locs{grid-template-columns:1fr 1fr;gap:10px var(--space-3)}
+  .locs li{white-space:normal;font-size:13px;letter-spacing:.04em}
+  .ct .sq-card{padding:var(--space-6)}
+}
+
+/* ===== Arabic / RTL ===== */
+:root{--font-display:"IBM Plex Sans Arabic","Chakra Petch",sans-serif;--font-sans:"IBM Plex Sans Arabic","IBM Plex Sans",sans-serif;--font-mono:"IBM Plex Sans Arabic","IBM Plex Mono",monospace}
+html[lang="ar"] body *{letter-spacing:0!important;text-transform:none!important}
+html[lang="ar"] .lang{font-family:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif}
+.sq-route,.sq-card__spec code,.spec code,.ct .mail{direction:ltr;unicode-bidi:isolate}
+.logo,footer svg{direction:ltr}
+.hero canvas{transform:scaleX(-1)}
+.flow li{padding:var(--space-6) 0 0 var(--space-6)}
+.flow li::before{left:auto;right:0}
+.list li{padding:14px 44px 14px var(--space-6)}
+.list li::before{left:auto;right:var(--space-6)}
+.ticks li,.locs li{padding-left:0;padding-right:22px}
+.ticks li::before,.locs li::before{left:auto;right:2px}
+.spec th,.spec td{text-align:right}
+@media (max-width:1200px){.nav a.nl::after{content:"←"}}
+.menu-btn{padding:12px 8px 12px 0}
+.sq-eyebrow::before{content:"//"}
+h1,h2,h3{line-height:1.25}
+.display{line-height:1.2}
+.big{line-height:1.7}
+.nav a.nl{font-size:15px}
+.nav .sq-btn,.sq-btn{font-size:15px}
+.sq-eyebrow,.crumb,.sq-card__num,.flow .n,.fparent,.fbase,.fcols .t,.hero .meta{font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home" aria-label="الصفحة الرئيسية لـ Spartiq">
+      <svg viewBox="0 0 219.5 35.2" aria-hidden="true"><path d="M2 29 L13 3 H21 L10 29 Z" fill="#FF6600"/><path d="M14 29 L25 3 H31 L20 29 Z" fill="#ECE8E2"/><g fill="#ECE8E2" transform="translate(45 29) scale(0.03714 -0.03714)"><path d="M50 108V208H184V149L217 116H424L458 150V266L425 299H160L52 407V592L160 700H476L584 592V491H450V551L417 584H219L186 551V448L219 415H484L592 307V110L482 0H158Z"/><path transform="translate(717.0 0)" d="M65 700H504L611 592V347L503 238H201V0H65ZM442 352 477 387V551L442 586H201V352Z"/><path transform="translate(1443.0 0)" d="M261 700H385L641 0H503L446 155H200L143 0H5ZM416 267 323 533H321L231 267Z"/><path transform="translate(2169.0 0)" d="M615 232V0H479V201L419 268H201V0H65V700H504L611 592V380L543 311ZM201 380H442L477 415V551L442 586H201Z"/><path transform="translate(2924.0 0)" d="M224 585H15V700H569V585H360V0H224Z"/><path transform="translate(3588.0 0)" d="M70 700H206V0H70Z"/><path transform="translate(3944.0 0)" d="M666 -56 582 -140 441 0H170L55 115V585L170 700H530L645 585V115L571 41ZM458 116 509 167V533L458 584H242L191 533V167L242 116Z"/></g></svg>
+    </a>
+    <ul id="site-nav">
+      <li><a class="nl" href="#manufacturing" data-nav="manufacturing">التصنيع التعاقدي</a></li>
+      <li><a class="nl" href="#industrial-services" data-nav="industrial-services">الخدمات الصناعية</a></li>
+      <li><a class="nl" href="#distribution" data-nav="distribution">التوزيع</a></li>
+      <li><a class="nl" href="#market-entry" data-nav="market-entry">دخول الأسواق</a></li>
+      <li><a class="nl" href="#about" data-nav="about">من نحن</a></li>
+      <li class="lang-li"><a class="nl" href="/" data-lang="/" lang="en" hreflang="en">English</a></li>
+    </ul>
+    <a class="lang" href="/" data-lang="/" lang="en" hreflang="en">English</a>
+    <a class="sq-btn sq-btn--secondary sq-btn--on-graphite" href="#quote" data-nav="quote">اطلب عرض سعر</a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><i aria-hidden="true"><b></b><b></b><b></b></i><span class="mb-t">القائمة</span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HOME ================= -->
+<div data-page="home">
+  <section class="hero gr">
+    <canvas id="grid" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <p class="sq-eyebrow sq-eyebrow--on-graphite">شريك صناعي</p>
+      <h1 class="display"><span class="ln">توريدات وخدمات هندسية</span> <span class="ln">للصناعات</span> <span class="ln">الحيوية.</span></h1>
+      <p class="lead">نصنّع ونصون ونورّد القطع والخدمات التي تعتمد عليها الصناعات الثقيلة.</p>
+      <div class="ctas">
+        <a class="sq-btn sq-btn--primary" href="#quote">اطلب عرض سعر</a>
+        <a class="sq-btn sq-btn--secondary sq-btn--on-graphite" href="#contact">تواصل معنا</a>
+      </div>
+      <div class="meta"><span>الولايات المتحدة</span><span>المملكة المتحدة</span><span>الهند</span><span>المملكة العربية السعودية</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap statement">
+      <p class="sq-eyebrow">من نحن</p>
+      <p class="big">نجمع بين التصنيع والقدرات الميدانية والتوريد والوصول إلى الأسواق، لخدمة المشغّلين الصناعيين والمصنّعين الذين يخدمونهم.</p>
+    </div>
+  </section>
+
+  <section class="ash">
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">ما نقدّمه</p>
+        <h2><span class="ln">أربعة تخصصات.</span><br> <span class="ln">شريك واحد مسؤول.</span></h2>
+      </div>
+      <div class="grid4 lines">
+        <a class="sq-card" href="#manufacturing"><span class="sq-card__num">01</span><h3 class="sq-card__title">التصنيع التعاقدي</h3><p class="sq-card__body">مكوّنات دقيقة تُصنَّع وفق المواصفات وتخضع لفحص مستقل.</p><span class="sq-btn sq-btn--link">اكتشف ←</span></a>
+        <a class="sq-card" href="#industrial-services"><span class="sq-card__num">02</span><h3 class="sq-card__title">الخدمات الصناعية</h3><p class="sq-card__body">صيانة وفحص ودعم أعمال التوقف للمصانع العاملة.</p><span class="sq-btn sq-btn--link">اكتشف ←</span></a>
+        <a class="sq-card" href="#distribution"><span class="sq-card__num">03</span><h3 class="sq-card__title">التوزيع</h3><p class="sq-card__body">صمامات ومواد إحكام وقطع غيار ومستهلكات من مصنّعين معتمدين.</p><span class="sq-btn sq-btn--link">اكتشف ←</span></a>
+        <a class="sq-card" href="#market-entry"><span class="sq-card__num">04</span><h3 class="sq-card__title">دخول الأسواق</h3><p class="sq-card__body">الاعتمادات والشراكات والمبيعات في المملكة العربية السعودية.</p><span class="sq-btn sq-btn--link">اكتشف ←</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">كيف تتكامل خدماتنا</p>
+        <h2><span class="ln">شريك واحد،</span> <span class="ln">من دخول السوق</span> <span class="ln">إلى الصيانة.</span></h2>
+        <p class="lead">كل خدمة تكمّل الأخرى، فالمنتجات التي ندخلها إلى المنطقة يورّدها ويصنّعها ويصونها فريق واحد مسؤول.</p>
+      </div>
+      <ol class="flow fit" style="--n:4">
+        <li><span class="n">الخطوة 01</span><h3>الدخول</h3><p>نحصل للمصنّعين على الاعتماد ونرسّخ حضورهم في المملكة العربية السعودية.</p><a class="sq-btn sq-btn--link" href="#market-entry">دخول الأسواق ←</a></li>
+        <li><span class="n">الخطوة 02</span><h3>التوريد</h3><p>نورّد منتجاتهم إلى المشغّلين في الخليج مع كامل المستندات المطلوبة.</p><a class="sq-btn sq-btn--link" href="#distribution">التوزيع ←</a></li>
+        <li><span class="n">الخطوة 03</span><h3>التصنيع</h3><p>نصنّع القطع وفق الرسومات عبر شركاء معتمدين في الهند.</p><a class="sq-btn sq-btn--link" href="#manufacturing">التصنيع التعاقدي ←</a></li>
+        <li><span class="n">الخطوة 04</span><h3>الصيانة</h3><p>نحافظ على تشغيل المصانع التي تخدمها هذه المنتجات بأمان.</p><a class="sq-btn sq-btn--link" href="#industrial-services">الخدمات الصناعية ←</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="ash">
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">القطاعات</p>
+        <h2><span class="ln">مصمَّمون</span> <span class="ln">للأعمال الثقيلة والخاضعة للتنظيم.</span></h2>
+      </div>
+      <div class="grid3 ind">
+        <div class="sq-card"><h3 class="sq-card__title">النفط والغاز والبتروكيماويات</h3></div>
+        <div class="sq-card"><h3 class="sq-card__title">الكهرباء والمياه</h3></div>
+        <div class="sq-card"><h3 class="sq-card__title">المعادن والتعدين</h3></div>
+        <div class="sq-card"><h3 class="sq-card__title">المعدات والآلات الثقيلة</h3></div>
+        <div class="sq-card"><h3 class="sq-card__title">السيارات</h3></div>
+        <div class="sq-card"><h3 class="sq-card__title">الرعاية الصحية</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gr band">
+    <div class="wrap">
+      <div style="display:grid;gap:var(--space-3)"><p class="sq-eyebrow sq-eyebrow--on-graphite">ابدأ الآن</p><h2><span class="ln">أرسل لنا استفسارك.</span><br> <span class="ln">وسنقدّم لك عرض السعر.</span></h2></div>
+      <a class="sq-btn sq-btn--primary" href="#quote">اطلب عرض سعر</a>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTRACT MANUFACTURING ================= -->
+<div data-page="manufacturing" hidden>
+  <section class="ph gr">
+    <div class="wrap">
+      <p class="crumb"><a href="#home">الرئيسية</a> / التصنيع التعاقدي</p>
+      <div class="ph-grid">
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">التصنيع التعاقدي</p><h1><span class="ln">قطع دقيقة،</span> <span class="ln">تُصنَّع وفق رسوماتك.</span></h1></div>
+        <div>
+          <p class="lead">مكوّنات يصنّعها شركاء معتمدون في الهند ويفحصها مهندسونا قبل الشحن، لعملائنا في الولايات المتحدة والمملكة المتحدة وأوروبا والخليج.</p>
+          <div class="lanes"><span class="sq-route">IN <b>→</b> US</span><span class="sq-route">IN <b>→</b> UK</span><span class="sq-route">IN <b>→</b> EU</span><span class="sq-route">IN <b>→</b> SA</span></div>
+          <a class="sq-btn sq-btn--primary" href="#quote">اطلب عرض سعر</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap statement">
+      <p class="sq-eyebrow">Spartiq</p>
+      <p class="big">نسعّر وفق الرسومات، ونؤهّل المورّد وندقّقه، وندير الإنتاج والفحص، ونشحن وفق المواصفات. <b style="font-weight:600">تستلم القطعة، لا المشكلة.</b></p>
+    </div>
+  </section>
+
+  <section class="ash">
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">طريقة عملنا</p>
+        <h2><span class="ln">من عرض السعر إلى التسليم،</span> <span class="ln">في سجل واحد.</span></h2>
+        <p class="lead">يدعم مهندسينا نظام عمل رقمي يطابق كل قطعة مع الشريك المناسب، ويتوقّع المخاطر، ويُبقي كل طلب مرئيًا من الرسم الأول حتى الفاتورة النهائية.</p>
+      </div>
+      <ol class="flow" style="--n:5">
+        <li><span class="n">المرحلة 01</span><h3>عرض السعر</h3><p>مراجعة الرسومات ومطابقتها مع شركاء معتمدين للحصول على سعر واضح وتنافسي.</p></li>
+        <li><span class="n">المرحلة 02</span><h3>البدء</h3><p>مراجعة هندسية وملاحظات حول قابلية التصنيع وتقييم للمخاطر قبل بدء العمل.</p></li>
+        <li><span class="n">المرحلة 03</span><h3>الإنتاج</h3><p>متابعة التقدّم ونقاط فحص الجودة طوال مراحل التصنيع.</p></li>
+        <li><span class="n">المرحلة 04</span><h3>التسليم</h3><p>الفحص ومستندات التصدير وتتبّع الشحنة حتى باب منشأتك.</p></li>
+        <li><span class="n">المرحلة 05</span><h3>السجلات</h3><p>أوامر الشراء والفواتير ومستندات الجودة محفوظة في مكان واحد.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">القدرات</p>
+        <h2><span class="ln">القدرات</span> <span class="ln">التصنيعية.</span></h2>
+      </div>
+      <div class="grid3">
+        <article class="sq-card"><span class="sq-card__num">01</span><h3 class="sq-card__title">التشغيل الدقيق</h3><p class="sq-card__body">خراطة وتفريز وتشغيل متعدد المحاور بالتحكم الرقمي وفق تفاوتات دقيقة.</p><p class="sq-card__spec">CNC · VMC · خماسي المحاور · FAI</p></article>
+        <article class="sq-card"><span class="sq-card__num">02</span><h3 class="sq-card__title">التصنيع المعدني</h3><p class="sq-card__body">تصنيع معدني خفيف وثقيل، وهياكل ملحومة، وقطع تعمل تحت الضغط.</p><p class="sq-card__spec">MIG · TIG · SAW · لحّامون معتمدون</p></article>
+        <article class="sq-card"><span class="sq-card__num">03</span><h3 class="sq-card__title">السباكة</h3><p class="sq-card__body">سباكة رملية ودقيقة من السبائك الحديدية وغير الحديدية.</p><p class="sq-card__spec">رملية · دقيقة · فحص غير إتلافي</p></article>
+        <article class="sq-card"><span class="sq-card__num">04</span><h3 class="sq-card__title">الحدادة والطرق</h3><p class="sq-card__body">مطروقات بالقوالب المفتوحة والمغلقة، مشغّلة حتى التشطيب النهائي.</p><p class="sq-card__spec">قالب مفتوح · قالب مغلق · معالجة حرارية · PMI</p></article>
+        <article class="sq-card"><span class="sq-card__num">05</span><h3 class="sq-card__title">الصفائح المعدنية</h3><p class="sq-card__body">قطع بالليزر وكبس وثني وحاويات منتهية التصنيع.</p><p class="sq-card__spec">ليزر · مكابس ثني · طلاء بودرة</p></article>
+        <article class="sq-card"><span class="sq-card__num">06</span><h3 class="sq-card__title">التجميعات</h3><p class="sq-card__body">تجميعات فرعية ووحدات كاملة، مصنّعة ومختبرة ومعبّأة وفق المواصفات.</p><p class="sq-card__spec">تجهيز الأطقم · الاختبار · التعبئة وفق المواصفات</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ash">
+    <div class="wrap split">
+      <div class="head" style="margin:0">
+        <p class="sq-eyebrow">كل طلب</p>
+        <h2>مجموعة مستندات واحدة.</h2>
+        <p class="lead">المستندات التي يتوقعها فريق الجودة لديك، في ملف واحد، من مورّد معتمد واحد.</p>
+      </div>
+      <div class="tbl">
+        <table class="spec">
+          <tr><th>القطعة الأولى</th><td>تقرير فحص القطعة الأولى (FAI) مقارنةً برسوماتك</td></tr>
+          <tr><th>المواد</th><td>شهادات مصنع وفق <code>EN 10204 3.1</code>، مع تتبّع رقم الصهر</td></tr>
+          <tr><th>الفحص</th><td>تقرير أبعاد؛ وفحص غير إتلافي وPMI عند الطلب</td></tr>
+          <tr><th>الشحن</th><td>قائمة التعبئة، والفاتورة التجارية، وشهادة المنشأ</td></tr>
+          <tr><th>الشروط</th><td>تسعير تسليم المصنع أو تسليم الموقع (DDP)، يُحدَّد مسبقًا</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ================= INDUSTRIAL SERVICES ================= -->
+<div data-page="industrial-services" hidden>
+  <section class="ph gr">
+    <div class="wrap">
+      <p class="crumb"><a href="#home">الرئيسية</a> / الخدمات الصناعية</p>
+      <div class="ph-grid">
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">الخدمات الصناعية</p><h1><span class="ln">نحافظ على المصانع العاملة</span> <span class="ln">آمنة وفي حالة تشغيل</span> <span class="ln">وضمن الجدول الزمني.</span></h1></div>
+        <div><p class="lead">خدمات ميدانية للمصافي ومصانع البتروكيماويات ومحطات الكهرباء والمياه، مخطّطة وفق جدول الصيانة لديك ومنفّذة بمعيار صفر حوادث.</p><a class="sq-btn sq-btn--primary" href="#contact">خطّط لأعمال التوقف</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">الخدمات</p>
+        <h2><span class="ln">خدمات أثناء التشغيل</span> <span class="ln">وأثناء التوقف.</span></h2>
+      </div>
+      <div class="grid3">
+        <article class="sq-card"><span class="sq-card__num">الصمامات</span><h3 class="sq-card__title">إصلاح الصمامات واختبارها</h3><p class="sq-card__body">عمرة واختبار ضغط ومعايرة لصمامات العمليات والسلامة.</p></article>
+        <article class="sq-card"><span class="sq-card__num">أثناء التشغيل</span><h3 class="sq-card__title">إحكام التسريبات والتوصيل الساخن</h3><p class="sq-card__body">إصلاحات وتوصيلات تُنفَّذ والمصنع مستمر في العمل.</p></article>
+        <article class="sq-card"><span class="sq-card__num">المعالجة الحرارية</span><h3 class="sq-card__title">المعالجة الحرارية بعد اللحام</h3><p class="sq-card__body">إزالة الإجهادات والتسخين المتحكَّم به للمعدات الملحومة في الموقع.</p></article>
+        <article class="sq-card"><span class="sq-card__num">الفحص</span><h3 class="sq-card__title">الفحص غير الإتلافي وفحص اللحام</h3><p class="sq-card__body">فحص بالأشعة والموجات فوق الصوتية والجسيمات المغناطيسية والسوائل النافذة والفحص البصري.</p></article>
+        <article class="sq-card"><span class="sq-card__num">المعدات الدوّارة</span><h3 class="sq-card__title">المضخات والمحركات</h3><p class="sq-card__body">اختبار المضخات ومعايرتها، وإعادة لف المحركات، والإصلاح الميكانيكي.</p></article>
+        <article class="sq-card"><span class="sq-card__num">أعمال التوقف</span><h3 class="sq-card__title">دعم أعمال التوقف</h3><p class="sq-card__body">فرق ماهرة وأعمال تصنيع معدني ودهان لأعمال التوقف المخطّطة.</p></article>
+      </div>
+      <p class="small note">تُقدَّم بعض الخدمات بالتعاون مع مقاولين شركاء معتمدين.</p>
+    </div>
+  </section>
+
+  <section class="ash">
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">أعمال التوقف</p>
+        <h2><span class="ln">نخطّط مع المصنع،</span> <span class="ln">لا من حوله.</span></h2>
+      </div>
+      <ol class="flow" style="--n:4">
+        <li><span class="n">الخطوة 01</span><h3>النطاق</h3><p>قوائم الأعمال والمواد والقوى العاملة بالاتفاق مع فريق الصيانة لديك.</p></li>
+        <li><span class="n">الخطوة 02</span><h3>التحضير</h3><p>قطع الغيار والمعدات والتصاريح جاهزة قبل إيقاف الوحدة.</p></li>
+        <li><span class="n">الخطوة 03</span><h3>التنفيذ</h3><p>فرق تحت الإشراف تعمل وفق جدولك ومعايير السلامة لديك.</p></li>
+        <li><span class="n">الخطوة 04</span><h3>التسليم</h3><p>سجلات الفحص ومستندات الإغلاق عند التسليم.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="gr band">
+    <div class="wrap"><h2><span class="ln">تخطّط لأعمال توقف</span> <span class="ln">أو تحتاج دعمًا أثناء التشغيل؟</span></h2><a class="sq-btn sq-btn--primary" href="#contact">تواصل معنا</a></div>
+  </section>
+</div>
+
+<!-- ================= DISTRIBUTION ================= -->
+<div data-page="distribution" hidden>
+  <section class="ph gr">
+    <div class="wrap">
+      <p class="crumb"><a href="#home">الرئيسية</a> / التوزيع</p>
+      <div class="ph-grid">
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">التوزيع</p><h1><span class="ln">منتجات معتمدة،</span> <span class="ln">تُسلَّم مع</span> <span class="ln">كامل المستندات المطلوبة.</span></h1></div>
+        <div>
+          <p class="lead">نمثّل مصنّعين من الولايات المتحدة والمملكة المتحدة وأوروبا والهند، ونورّد للمشغّلين في المملكة العربية السعودية ومنطقة الخليج.</p>
+          <div class="lanes"><span class="sq-route">US <b>→</b> SA</span><span class="sq-route">UK <b>→</b> SA</span><span class="sq-route">EU <b>→</b> SA</span><span class="sq-route">IN <b>→</b> AE</span></div>
+          <a class="sq-btn sq-btn--primary" href="#contact">اطلب عرض سعر للتوريد</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">المنتجات</p>
+        <h2>ما نورّده.</h2>
+      </div>
+      <div class="grid3">
+        <article class="sq-card"><span class="sq-card__num">التحكم في التدفق</span><h3 class="sq-card__title">الصمامات وقطع غيارها</h3><p class="sq-card__body">صمامات العمليات والتحكم والسلامة مع مكوّناتها الداخلية وقطع الغيار.</p></article>
+        <article class="sq-card"><span class="sq-card__num">الإحكام</span><h3 class="sq-card__title">الحشوات ومواد الإحكام</h3><p class="sq-card__body">حشوات حلزونية وحلقية وكامبروفايل وصفائح.</p></article>
+        <article class="sq-card"><span class="sq-card__num">الإصلاح</span><h3 class="sq-card__title">منتجات إحكام التسريبات</h3><p class="sq-card__body">مركّبات إحكام وأغطية ومشابك للإصلاح أثناء التشغيل.</p></article>
+        <article class="sq-card"><span class="sq-card__num">سلامة المعدات</span><h3 class="sq-card__title">مستلزمات المعالجة الحرارية والفحص</h3><p class="sq-card__body">معدات ومستهلكات للمعالجة الحرارية والفحص غير الإتلافي.</p></article>
+        <article class="sq-card"><span class="sq-card__num">قطع الغيار</span><h3 class="sq-card__title">قطع غيار المضخات والمعدات الكهربائية والمحركات</h3><p class="sq-card__body">قطع غيار حرجة من مصنّعين أصليين معتمدين.</p></article>
+        <article class="sq-card"><span class="sq-card__num">أعمال التوقف</span><h3 class="sq-card__title">تجهيز مواد أعمال التوقف</h3><p class="sq-card__body">مواد مجهّزة وموثّقة قبل أعمال التوقف المخطّطة.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ash">
+    <div class="wrap split">
+      <div class="head" style="margin:0">
+        <p class="sq-eyebrow">للمشغّلين</p>
+        <h2><span class="ln">ما تتضمنه</span> <span class="ln">كل عملية توريد.</span></h2>
+      </div>
+      <ul class="list">
+        <li>منتجات من مصنّعين أصليين معتمدين</li>
+        <li>شهادات اختبار المواد وشهادات المطابقة</li>
+        <li>شهادات مطابقة المنتجات والإرساليات السعودية</li>
+        <li>توريد حسب الطلب ومن المخزون</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="head" style="margin:0">
+        <p class="sq-eyebrow">للمصنّعين</p>
+        <h2><span class="ln">هل تريد أن نمثّل</span> <span class="ln">منتجاتك؟</span></h2>
+      </div>
+      <div style="display:grid;gap:var(--space-4);justify-items:start">
+        <p class="lead">نستورد المنتجات المعتمدة ونخزّنها ونورّدها للمشغّلين في أنحاء الخليج. وإن لم تكن معتمدًا بعد، نبدأ معك بخدمة دخول الأسواق.</p>
+        <a class="sq-btn sq-btn--link" href="#market-entry">دخول الأسواق ←</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="gr band">
+    <div class="wrap"><h2><span class="ln">تحتاج قطعًا أو مستلزمات</span> <span class="ln">لمصنعك؟</span></h2><a class="sq-btn sq-btn--primary" href="#contact">تواصل معنا</a></div>
+  </section>
+</div>
+
+<!-- ================= MARKET ENTRY ================= -->
+<div data-page="market-entry" hidden>
+  <section class="ph gr">
+    <div class="wrap">
+      <p class="crumb"><a href="#home">الرئيسية</a> / دخول الأسواق</p>
+      <div class="ph-grid">
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">دخول الأسواق</p><h1><span class="ln">طريقك إلى</span> <span class="ln">المملكة العربية السعودية</span> <span class="ln">ومنطقة الخليج.</span></h1></div>
+        <div>
+          <p class="lead">للمصنّعين وشركات الخدمات من الولايات المتحدة والمملكة المتحدة وأوروبا والهند والصين. نرافقك من التقييم الأول حتى الاعتماد كمورّد، والحضور المحلي، وتحقيق الإيرادات.</p>
+          <div class="lanes"><span class="sq-route">US <b>→</b> SA</span><span class="sq-route">UK <b>→</b> SA</span><span class="sq-route">EU <b>→</b> SA</span><span class="sq-route">IN <b>→</b> SA</span><span class="sq-route">CN <b>→</b> SA</span></div>
+          <a class="sq-btn sq-btn--primary" href="#contact">ناقش دخول السوق معنا</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">الخدمات</p>
+        <h2><span class="ln">دخول السوق،</span> <span class="ln">من الاستراتيجية إلى المبيعات.</span></h2>
+      </div>
+      <div class="grid3">
+        <article class="sq-card"><span class="sq-card__num">الاستراتيجية</span><h3 class="sq-card__title">دخول الأسواق</h3><p class="sq-card__body">المشغّلون المستهدفون والطلب والمنافسة والطريق الأنسب إلى السوق.</p></article>
+        <article class="sq-card"><span class="sq-card__num">الاعتماد</span><h3 class="sq-card__title">تأهيل المورّدين</h3><p class="sq-card__body">التسجيل والتأهيل المسبق والتدقيق والملفات الفنية حتى الحصول على صفة المورّد المعتمد.</p></article>
+        <article class="sq-card"><span class="sq-card__num">الشراكات</span><h3 class="sq-card__title">المشاريع المشتركة والشراكات</h3><p class="sq-card__body">البحث عن شريك محلي والعناية الواجبة وهيكلة المشاريع المشتركة واتفاقيات الوكالة والتوزيع.</p></article>
+        <article class="sq-card"><span class="sq-card__num">الحضور</span><h3 class="sq-card__title">التأسيس المحلي</h3><p class="sq-card__body">تأسيس فرع أو شركة تابعة، والترخيص، وخطط المحتوى المحلي، والتوظيف داخل المملكة.</p></article>
+        <article class="sq-card"><span class="sq-card__num">النمو</span><h3 class="sq-card__title">تطوير الأعمال</h3><p class="sq-card__body">مبيعات مباشرة نيابةً عنك، وتعريف بالمشترين، ودعم في المناقصات، وبناء فريق مبيعاتك المحلي.</p></article>
+        <article class="sq-card"><span class="sq-card__num">الامتثال</span><h3 class="sq-card__title">مطابقة المنتجات</h3><p class="sq-card__body">شهادات مطابقة المنتجات والإرساليات السعودية للسلع الخاضعة للتنظيم.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ash">
+    <div class="wrap">
+      <div class="head">
+        <p class="sq-eyebrow">آلية العمل</p>
+        <h2>كيف يسير التعاون معنا.</h2>
+      </div>
+      <ol class="flow" style="--n:4">
+        <li><span class="n">الخطوة 01</span><h3>التقييم</h3><p>مدى توافق منتجاتك وشهاداتك مع المشغّلين المستهدفين.</p></li>
+        <li><span class="n">الخطوة 02</span><h3>التأهيل</h3><p>التسجيل والاعتماد لدى المشغّلين الذين تريد التوريد لهم.</p></li>
+        <li><span class="n">الخطوة 03</span><h3>التأسيس</h3><p>شريك أو مشروع مشترك أو فرع على أرض الواقع.</p></li>
+        <li><span class="n">الخطوة 04</span><h3>النمو</h3><p>تطوير الأعمال والمناقصات والتوريد عبر ذراع التوزيع لدينا.</p></li>
+      </ol>
+      <a class="sq-btn sq-btn--link mt-link" href="#distribution">التوزيع ←</a>
+    </div>
+  </section>
+
+  <section class="gr band">
+    <div class="wrap"><h2><span class="ln">هل أنت مستعد للتوريد</span> <span class="ln">لمشغّلي الخليج؟</span></h2><a class="sq-btn sq-btn--primary" href="#contact">ناقش دخول السوق معنا</a></div>
+  </section>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div data-page="about" hidden>
+  <section class="ph gr">
+    <div class="wrap">
+      <p class="crumb"><a href="#home">الرئيسية</a> / من نحن</p>
+      <div class="ph-grid">
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">عن Spartiq</p><h1><span class="ln">أسّسها أشخاص</span> <span class="ln">عملوا</span> <span class="ln">داخل المصانع.</span></h1></div>
+        <div><p class="lead">تربط Spartiq المصنّعين الغربيين والقاعدة الصناعية الهندية بمشغّلي الخليج.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap statement">
+      <p class="sq-eyebrow">شركتنا</p>
+      <p class="big">أمضى شركاؤنا أربعة عقود في المصافي ومصانع البتروكيماويات ومحطات الكهرباء والمياه في المملكة العربية السعودية والإمارات والهند، يقودون أعمال التوقف ويبنون شركات المقاولات ويحصلون على اعتمادات المشغّلين.</p>
+    </div>
+  </section>
+
+  <section class="gr">
+    <div class="wrap">
+      <div class="head"><p class="sq-eyebrow sq-eyebrow--on-graphite">مبادئنا</p><h2><span class="ln">المعايير</span> <span class="ln">التي نلتزم بها.</span></h2></div>
+      <div class="pr">
+        <div><h3>السلامة</h3><p>في كل موقع وكل وردية. صفر حوادث هو السجل الوحيد المقبول.</p></div>
+        <div><h3>الجودة</h3><p>موثّق وقابل للتتبّع ومفحوص قبل أن يغادر أيدينا.</p></div>
+        <div><h3>النزاهة</h3><p>تعامل شفاف مع العملاء والشركاء والمورّدين.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ================= REQUEST A QUOTE ================= -->
+<div data-page="quote" hidden>
+  <section class="gr" id="rfq">
+    <div class="wrap rfq">
+      <div>
+        <div class="head" style="margin-bottom:var(--space-4)">
+          <p class="sq-eyebrow sq-eyebrow--on-graphite">اطلب عرض سعر</p>
+          <h2>أرسل لنا رسوماتك.</h2>
+        </div>
+        <p class="lead">نقدّم عرض السعر وفق الرسومات، من مورّد معتمد، مع مدة التوريد والشروط.</p>
+        <ul class="ticks">
+          <li>نماذج أولية وكميات تجريبية وإنتاجية</li>
+          <li>السعر ومدة التوريد وخطة الفحص في عرض سعر واحد</li>
+          <li>مورّدون مؤهَّلون وخاضعون للتدقيق</li>
+          <li>فحص قبل الشحن</li>
+          <li>سرية تامة في التعامل مع الرسومات</li>
+        </ul>
+        <div class="nxt">
+          <p class="sq-eyebrow sq-eyebrow--on-graphite">ماذا يحدث بعد ذلك</p>
+          <ol>
+            <li><b>01</b>يراجع أحد مهندسينا رسوماتك ومواصفاتك.</li>
+            <li><b>02</b>نطابق العمل مع مورّد معتمد.</li>
+            <li><b>03</b>تستلم عرض سعر يتضمن السعر ومدة التوريد والشروط.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="ph2"><h3>طلب عرض سعر</h3><span class="small"><span class="rq">*</span> حقل مطلوب</span></div>
+        <form id="rfq-form" novalidate>
+          <div class="g2">
+            <label class="fl" for="r-first"><span>الاسم الأول <span class="rq">*</span></span><input type="text" id="r-first" name="First name" autocomplete="given-name"></label>
+            <label class="fl" for="r-last"><span>اسم العائلة <span class="rq">*</span></span><input type="text" id="r-last" name="Last name" autocomplete="family-name"></label>
+          </div>
+          <label class="fl" for="r-co"><span>الشركة / الجهة <span class="rq">*</span></span><input type="text" id="r-co" name="Company" autocomplete="organization"></label>
+          <label class="fl" for="r-email"><span>البريد الإلكتروني للشركة <span class="rq">*</span></span><input type="email" id="r-email" name="Email" autocomplete="email"></label>
+          <div class="g-ph">
+            <label class="fl" for="r-cc"><span>رمز الدولة <span class="rq">*</span></span>
+              <select id="r-cc" name="Country code">
+                <option value="+1">+1 الولايات المتحدة</option><option value="+44">+44 المملكة المتحدة</option><option value="+966">+966 السعودية</option><option value="+971">+971 الإمارات</option><option value="+91">+91 الهند</option><option value="+49">+49 ألمانيا</option><option value="+33">+33 فرنسا</option><option value="+39">+39 إيطاليا</option><option value="+31">+31 هولندا</option><option value="+974">+974 قطر</option><option value="+968">+968 عُمان</option><option value="+965">+965 الكويت</option><option value="+973">+973 البحرين</option><option value="other">أخرى</option>
+              </select>
+            </label>
+            <label class="fl" for="r-phone"><span>رقم الهاتف <span class="rq">*</span></span><input type="tel" id="r-phone" name="Phone" autocomplete="tel-national"></label>
+          </div>
+          <label class="fl" for="r-help"><span>كيف يمكننا مساعدتك؟ <span class="rq">*</span></span>
+            <select id="r-help" name="Request type">
+              <option>عرض سعر لقطع وفق الرسومات</option><option>تطوير منتج جديد</option><option>طلبات إنتاج / طلبات متكررة</option><option>دعم سلاسل الإمداد</option>
+            </select>
+          </label>
+          <div class="fl"><span>تحميل الملفات</span>
+            <div class="upl" id="r-drop">
+              <input type="file" id="r-files" name="Files" multiple accept=".pdf,.step,.stp,.igs,.iges,.dwg,.dxf,.xlsx,.xls,.csv,.zip" aria-label="تحميل الملفات">
+              <b>أفلت الرسومات هنا أو انقر للاستعراض</b>
+              <span id="r-drop-t">PDF أو STEP أو IGES أو DWG أو DXF أو Excel أو ZIP</span>
+            </div>
+          </div>
+          <label class="fl" for="r-msg"><span>الرسالة</span><textarea id="r-msg" name="Message" placeholder="المادة والكمية والتفاوتات والتشطيب وتاريخ التسليم المطلوب"></textarea></label>
+          <p class="small">نتعامل مع جميع الملفات بسرية تامة.</p>
+          <label class="cb" for="r-c1"><input type="checkbox" id="r-c1"><span>أوافق على تلقي مراسلات من Spartiq بخصوص هذا الطلب.</span></label>
+          <label class="cb" for="r-c2"><input type="checkbox" id="r-c2"><span>أوافق على قيام Spartiq بحفظ بياناتي الشخصية ومعالجتها. <span class="rq">*</span></span></label>
+          <label class="cb" for="r-c3"><input type="checkbox" id="r-c3"><span>أوافق على الشروط والأحكام وسياسة الخصوصية. <span class="rq">*</span></span></label>
+          <div><button class="sq-btn sq-btn--primary" type="submit">أرسل الرسومات</button></div>
+          <p class="ferr" id="r-err" hidden></p>
+        </form>
+        <div class="done" id="r-done" hidden>
+          <h3>شكرًا لك.</h3>
+          <p class="small">ملخّص طلبك أدناه. انقر «أرسل الطلب بالبريد» لإرساله إلى sales@spartiq.com، وأرفق رسوماتك بالرسالة.</p>
+          <pre id="r-sum"></pre>
+          <div class="row"><a class="sq-btn sq-btn--primary" id="r-mail" href="mailto:sales@spartiq.com">أرسل الطلب بالبريد</a><button class="sq-btn sq-btn--secondary" type="button" id="r-copy">انسخ الطلب</button><button class="sq-btn sq-btn--secondary" type="button" id="r-edit">تعديل</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="grid2 ct">
+        <div class="sq-card"><p class="sq-eyebrow">الاستفسارات</p><b class="mail">sales@spartiq.com</b><p class="sq-card__body">الاستفسارات العامة واستفسارات التوريد والخدمات والاستشارات.</p></div>
+        <div class="sq-card"><p class="sq-eyebrow">مواقعنا</p><ul class="locs"><li>الولايات المتحدة</li><li>المملكة المتحدة</li><li>الهند</li><li>المملكة العربية السعودية</li></ul><p class="sq-card__body">الاجتماعات بموعد مسبق.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div data-page="contact" hidden>
+  <section class="ph gr">
+    <div class="wrap">
+      <p class="crumb"><a href="#home">الرئيسية</a> / تواصل معنا</p>
+      <div class="ph-grid">
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">تواصل معنا</p><h1><span class="ln">لنناقش</span> <span class="ln">متطلباتك.</span></h1></div>
+        <div><p class="lead">أخبرنا بما تحتاجه، وسيتواصل معك الشخص المناسب من فريقنا.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="grid2 ct">
+        <div class="sq-card"><p class="sq-eyebrow">الاستفسارات</p><b class="mail">sales@spartiq.com</b><p class="sq-card__body">الاستفسارات العامة واستفسارات التوريد والخدمات والاستشارات.</p></div>
+        <div class="sq-card"><p class="sq-eyebrow">مواقعنا</p><ul class="locs"><li>الولايات المتحدة</li><li>المملكة المتحدة</li><li>الهند</li><li>المملكة العربية السعودية</li></ul><p class="sq-card__body">الاجتماعات بموعد مسبق.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <div class="flock"><svg viewBox="0 0 219.5 35.2" width="132" aria-label="Spartiq"><path d="M2 29 L13 3 H21 L10 29 Z" fill="#FF6600"/><path d="M14 29 L25 3 H31 L20 29 Z" fill="#ECE8E2"/><g fill="#ECE8E2" transform="translate(45 29) scale(0.03714 -0.03714)"><path d="M50 108V208H184V149L217 116H424L458 150V266L425 299H160L52 407V592L160 700H476L584 592V491H450V551L417 584H219L186 551V448L219 415H484L592 307V110L482 0H158Z"/><path transform="translate(717.0 0)" d="M65 700H504L611 592V347L503 238H201V0H65ZM442 352 477 387V551L442 586H201V352Z"/><path transform="translate(1443.0 0)" d="M261 700H385L641 0H503L446 155H200L143 0H5ZM416 267 323 533H321L231 267Z"/><path transform="translate(2169.0 0)" d="M615 232V0H479V201L419 268H201V0H65V700H504L611 592V380L543 311ZM201 380H442L477 415V551L442 586H201Z"/><path transform="translate(2924.0 0)" d="M224 585H15V700H569V585H360V0H224Z"/><path transform="translate(3588.0 0)" d="M70 700H206V0H70Z"/><path transform="translate(3944.0 0)" d="M666 -56 582 -140 441 0H170L55 115V585L170 700H530L645 585V115L571 41ZM458 116 509 167V533L458 584H242L191 533V167L242 116Z"/></g></svg><span class="fdiv" aria-hidden="true"></span><span class="fparent">إحدى شركات DrawingBoard Capital</span></div>
+        <span style="margin-top:var(--space-3)">التصنيع التعاقدي والخدمات الصناعية والتوزيع والاستشارات للصناعات الثقيلة.</span>
+      </div>
+      <div><span class="t">ما نقدّمه</span><a href="#manufacturing">التصنيع التعاقدي</a><a href="#industrial-services">الخدمات الصناعية</a><a href="#distribution">التوزيع</a><a href="#market-entry">دخول الأسواق</a></div>
+      <div><span class="t">الشركة</span><a href="#about">من نحن</a><a href="#quote">اطلب عرض سعر</a><a href="#contact">تواصل معنا</a></div>
+    </div>
+    <div class="fbase"><span>© 2026 DrawingBoard Capital LLC. جميع الحقوق محفوظة.</span><span>spartiq.com</span><p class="flegal">Spartiq وSpartiq Industries اسمان تجاريان لشركة DrawingBoard Capital LLC، وهي شركة ذات مسؤولية محدودة مسجّلة في ولاية ديلاوير.</p></div>
+  </div>
+</footer>
+
+<script>
+/* page router: each business line is its own page, addressed by #token */
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('[data-page]'));
+  var names=pages.map(function(p){return p.dataset.page});
+  var titles={home:'Spartiq',manufacturing:'التصنيع التعاقدي · Spartiq','industrial-services':'الخدمات الصناعية · Spartiq',distribution:'التوزيع · Spartiq','market-entry':'دخول الأسواق · Spartiq',about:'من نحن · Spartiq',quote:'اطلب عرض سعر · Spartiq',contact:'تواصل معنا · Spartiq'};
+  function show(token){
+    var page=token, anchor=null;
+    if(token==='consulting') page='market-entry';
+    if(names.indexOf(page)<0) page='home';
+    pages.forEach(function(p){p.hidden=p.dataset.page!==page});
+    document.querySelectorAll('[data-nav]').forEach(function(a){if(a.dataset.nav===page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+    document.title=titles[page]||'Spartiq';
+    if(window.__closeMenu) window.__closeMenu();
+    if(anchor){var el=document.getElementById(anchor); requestAnimationFrame(function(){el.scrollIntoView()})}
+    else window.scrollTo(0,0);
+    if(page==='home' && window.__drawGrid) window.__drawGrid();
+  }
+  var mb=document.getElementById('menu-btn'), nav=document.getElementById('site-nav');
+  function setMenu(open){nav.classList.toggle('open',open);mb.setAttribute('aria-expanded',open?'true':'false')}
+  mb.addEventListener('click',function(){setMenu(!nav.classList.contains('open'))});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+  window.__closeMenu=function(){setMenu(false)};
+  function current(){return (location.hash||'').replace('#','')||'home'}
+  window.addEventListener('hashchange',function(){show(current())});
+  document.querySelectorAll('[data-lang]').forEach(function(a){a.addEventListener('click',function(){a.href=a.getAttribute('data-lang')+(location.hash||'')})});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]'); if(!a) return;
+    var t=a.getAttribute('href').slice(1);
+    if(t===current()){e.preventDefault();show(t)}
+  });
+  show(current());
+})();
+
+/* RFQ form */
+(function(){
+  var f=document.getElementById('rfq-form'), done=document.getElementById('r-done');
+  var fi=document.getElementById('r-files'), dz=document.getElementById('r-drop'), dt=document.getElementById('r-drop-t');
+  var def=dt.textContent;
+  fi.addEventListener('change',function(){dt.textContent=fi.files.length?[].map.call(fi.files,function(x){return x.name}).join(', '):def});
+  ['dragenter','dragover'].forEach(function(e){dz.addEventListener(e,function(){dz.classList.add('over')})});
+  ['dragleave','drop'].forEach(function(e){dz.addEventListener(e,function(){dz.classList.remove('over')})});
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=document.getElementById('r-err'), miss=[];
+    [['r-first','الاسم الأول'],['r-last','اسم العائلة'],['r-co','الشركة'],['r-email','البريد الإلكتروني للشركة'],['r-phone','رقم الهاتف']].forEach(function(p){if(!document.getElementById(p[0]).value.trim()) miss.push(p[1])});
+    var em=document.getElementById('r-email').value.trim();
+    if(em && !/^\S+@\S+\.\S+$/.test(em)) miss.push('بريد إلكتروني صحيح');
+    if(!document.getElementById('r-c2').checked||!document.getElementById('r-c3').checked) miss.push('الموافقات المطلوبة');
+    if(miss.length){err.textContent='يرجى استكمال: '+miss.join('، ')+'.';err.hidden=false;return}
+    err.hidden=true;
+    var g=function(id){return document.getElementById(id).value.trim()};
+    var lines=['طلب عرض سعر','الاسم: '+g('r-first')+' '+g('r-last'),'الشركة: '+g('r-co'),'البريد الإلكتروني: '+g('r-email'),'الهاتف: '+(g('r-cc')==='other'?'':g('r-cc')+' ')+g('r-phone'),'نوع الطلب: '+g('r-help')];
+    if(fi.files.length) lines.push('الملفات: '+[].map.call(fi.files,function(x){return x.name}).join(', '));
+    if(g('r-msg')) lines.push('الرسالة: '+g('r-msg'));
+    document.getElementById('r-sum').textContent=lines.join('\n');
+    document.getElementById('r-mail').href='mailto:sales@spartiq.com?subject='+encodeURIComponent('طلب عرض سعر - '+g('r-co'))+'&body='+encodeURIComponent(lines.join('\n')+'\n\n(يرجى إرفاق الرسومات بهذه الرسالة.)');
+    f.hidden=true; done.hidden=false;
+  });
+  document.getElementById('r-edit').addEventListener('click',function(){done.hidden=true;f.hidden=false});
+  document.getElementById('r-copy').addEventListener('click',function(){
+    var b=this, pre=document.getElementById('r-sum');
+    function pick(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='تم التحديد: اضغط Ctrl+C'}
+    try{navigator.clipboard.writeText(pre.textContent).then(function(){b.textContent='تم النسخ'},pick)}catch(x){pick()}
+  });
+})();
+
+/* isometric engineering grid with pipe runs, behind the home hero */
+(function(){
+  var c=document.getElementById('grid'); if(!c||!c.getContext) return;
+  var x=c.getContext('2d');
+  function draw(){
+    var r=c.getBoundingClientRect(); if(!r.width) return;
+    var d=window.devicePixelRatio||1;
+    c.width=r.width*d; c.height=r.height*d; x.setTransform(d,0,0,d,0,0);
+    x.clearRect(0,0,r.width,r.height);
+    var s=36, t=Math.tan(Math.PI/6);
+    x.strokeStyle='rgba(156,151,143,.09)'; x.lineWidth=1;
+    for(var i=-r.height; i<r.width+r.height; i+=s){
+      x.beginPath(); x.moveTo(i,0); x.lineTo(i+r.height/t,r.height); x.stroke();
+      x.beginPath(); x.moveTo(i,r.height); x.lineTo(i+r.height/t,0); x.stroke();
+    }
+    if(r.width<860) return;
+    var h=r.height, ox=r.width*.58, dx=s*Math.cos(Math.PI/6)*2, dy=s;
+    x.lineCap='square';
+    function run(pts,col){x.strokeStyle=col;x.lineWidth=2;x.beginPath();x.moveTo(pts[0][0],pts[0][1]);for(var k=1;k<pts.length;k++)x.lineTo(pts[k][0],pts[k][1]);x.stroke()}
+    run([[ox,h*.30],[ox+dx*3,h*.30+dy*3],[ox+dx*3,h*.30+dy*3-90],[ox+dx*6,h*.30+dy*6-90]],'rgba(255,102,0,.55)');
+    run([[ox+dx,h*.62],[ox+dx*4,h*.62-dy*3],[ox+dx*7,h*.62],[ox+dx*7,h*.62-120]],'rgba(156,151,143,.35)');
+    [[ox+dx*3,h*.30+dy*3],[ox+dx*4,h*.62-dy*3]].forEach(function(p){x.fillStyle='rgba(255,102,0,.85)';x.fillRect(p[0]-3.5,p[1]-3.5,7,7)});
+  }
+  window.__drawGrid=draw; draw(); window.addEventListener('resize',draw);
+})();
+</script>
+</body>
+</html>
