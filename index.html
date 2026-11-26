@@ -42,6 +42,7 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 p{margin:0}
 .wrap{max-width:1248px;margin:0 auto;padding-left:max(24px, env(safe-area-inset-left, 0px));padding-right:max(24px, env(safe-area-inset-right, 0px))}
+.ln{display:inline-block}
 h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;margin:0;text-wrap:balance}
 .display{font-size:clamp(38px,5.6vw,68px);line-height:1;font-weight:700;letter-spacing:.01em}
 h1{font-size:clamp(30px,4.2vw,46px);line-height:1.06;font-weight:700;letter-spacing:.01em}
@@ -138,7 +139,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var
 .crumb a{text-decoration:none}
 .crumb a:hover{color:var(--on-graphite)}
 .ph-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--space-12);align-items:end}
-.ph h1{margin-top:var(--space-4);max-width:18ch}
+.ph h1{margin-top:var(--space-4);max-width:22ch}
 .ph .lead{font-size:18px;line-height:28px}
 .ph .sq-btn{margin-top:var(--space-6)}
 .ph .lanes{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-6)}
@@ -296,7 +297,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <canvas id="grid" aria-hidden="true"></canvas>
     <div class="wrap">
       <p class="sq-eyebrow sq-eyebrow--on-graphite">Industrial partner</p>
-      <h1 class="display">Engineering supply and services for critical industry.</h1>
+      <h1 class="display"><span class="ln">Engineering supply</span> <span class="ln">and services</span> <span class="ln">for critical industry.</span></h1>
       <p class="lead">We make, maintain and supply the parts and services that heavy industry depends on.</p>
       <div class="ctas">
         <a class="sq-btn sq-btn--primary" href="#quote">Request a quote</a>
@@ -317,7 +318,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">What we do</p>
-        <h2>Four disciplines.<br>One accountable partner.</h2>
+        <h2><span class="ln">Four disciplines.</span><br> <span class="ln">One accountable partner.</span></h2>
       </div>
       <div class="grid4 lines">
         <a class="sq-card" href="#manufacturing"><span class="sq-card__num">01</span><h3 class="sq-card__title">Contract manufacturing</h3><p class="sq-card__body">Precision components built to specification and independently inspected.</p><span class="sq-btn sq-btn--link">Explore →</span></a>
@@ -332,7 +333,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">How it fits together</p>
-        <h2>One partner, from market entry to maintenance.</h2>
+        <h2><span class="ln">One partner,</span> <span class="ln">from market entry</span> <span class="ln">to maintenance.</span></h2>
         <p class="lead">Each line feeds the next, so the products we bring into the region are supplied, made and maintained by the same accountable team.</p>
       </div>
       <ol class="flow fit" style="--n:4">
@@ -348,7 +349,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">Industries</p>
-        <h2>Built for heavy, regulated work.</h2>
+        <h2><span class="ln">Built for</span> <span class="ln">heavy, regulated work.</span></h2>
       </div>
       <div class="grid3 ind">
         <div class="sq-card"><h3 class="sq-card__title">Oil, gas &amp; petrochemicals</h3></div>
@@ -363,7 +364,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 
   <section class="gr band">
     <div class="wrap">
-      <div style="display:grid;gap:var(--space-3)"><p class="sq-eyebrow sq-eyebrow--on-graphite">Get started</p><h2>Send us an enquiry.<br>We'll quote to it.</h2></div>
+      <div style="display:grid;gap:var(--space-3)"><p class="sq-eyebrow sq-eyebrow--on-graphite">Get started</p><h2><span class="ln">Send us an enquiry.</span><br> <span class="ln">We'll quote to it.</span></h2></div>
       <a class="sq-btn sq-btn--primary" href="#quote">Request a quote</a>
     </div>
   </section>
@@ -375,7 +376,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <p class="crumb"><a href="#home">Home</a> / Contract manufacturing</p>
       <div class="ph-grid">
-        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Contract manufacturing</p><h1>Precision parts, built to your drawing.</h1></div>
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Contract manufacturing</p><h1><span class="ln">Precision parts,</span> <span class="ln">built to your drawing.</span></h1></div>
         <div>
           <p class="lead">Components made by qualified partners in India and inspected by our engineers before dispatch, for customers in the United States, the United Kingdom, Europe and the Gulf.</p>
           <div class="lanes"><span class="sq-route">IN <b>→</b> US</span><span class="sq-route">IN <b>→</b> UK</span><span class="sq-route">IN <b>→</b> EU</span><span class="sq-route">IN <b>→</b> SA</span></div>
@@ -396,7 +397,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">How we work</p>
-        <h2>From quotation to delivery, on one record.</h2>
+        <h2><span class="ln">From quotation to delivery,</span> <span class="ln">on one record.</span></h2>
         <p class="lead">Our engineers are supported by a digital workflow that matches each part to the right partner, anticipates risk and keeps every order visible, from first drawing to final invoice.</p>
       </div>
       <ol class="flow" style="--n:5">
@@ -413,7 +414,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">Capabilities</p>
-        <h2>Manufacturing capabilities.</h2>
+        <h2><span class="ln">Manufacturing</span> <span class="ln">capabilities.</span></h2>
       </div>
       <div class="grid3">
         <article class="sq-card"><span class="sq-card__num">01</span><h3 class="sq-card__title">Precision machining</h3><p class="sq-card__body">CNC turning, milling and multi-axis machining to tight tolerances.</p><p class="sq-card__spec">CNC · VMC · 5-axis · FAI</p></article>
@@ -453,7 +454,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <p class="crumb"><a href="#home">Home</a> / Industrial services</p>
       <div class="ph-grid">
-        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Industrial services</p><h1>Keeping operating plants safe, online and on schedule.</h1></div>
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Industrial services</p><h1><span class="ln">Keeping operating plants</span> <span class="ln">safe, online</span> <span class="ln">and on schedule.</span></h1></div>
         <div><p class="lead">Field services for refineries, petrochemical, power and water plants, planned around your maintenance calendar and delivered to a zero-harm standard.</p><a class="sq-btn sq-btn--primary" href="#contact">Plan a shutdown</a></div>
       </div>
     </div>
@@ -463,7 +464,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">Services</p>
-        <h2>On-stream and shutdown services.</h2>
+        <h2><span class="ln">On-stream and</span> <span class="ln">shutdown services.</span></h2>
       </div>
       <div class="grid3">
         <article class="sq-card"><span class="sq-card__num">Valves</span><h3 class="sq-card__title">Valve repair and testing</h3><p class="sq-card__body">Overhaul, pressure testing and calibration of process and safety valves.</p></article>
@@ -481,7 +482,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">Shutdowns</p>
-        <h2>Planned with the plant, not around it.</h2>
+        <h2><span class="ln">Planned with the plant,</span> <span class="ln">not around it.</span></h2>
       </div>
       <ol class="flow" style="--n:4">
         <li><span class="n">Step 01</span><h3>Scope</h3><p>Work lists, materials and manpower agreed with your maintenance team.</p></li>
@@ -493,7 +494,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
   </section>
 
   <section class="gr band">
-    <div class="wrap"><h2>Planning a turnaround or need on-stream support?</h2><a class="sq-btn sq-btn--primary" href="#contact">Contact us</a></div>
+    <div class="wrap"><h2><span class="ln">Planning a turnaround</span> <span class="ln">or need on-stream support?</span></h2><a class="sq-btn sq-btn--primary" href="#contact">Contact us</a></div>
   </section>
 </div>
 
@@ -503,7 +504,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <p class="crumb"><a href="#home">Home</a> / Distribution</p>
       <div class="ph-grid">
-        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Distribution</p><h1>Qualified products, delivered with the paperwork to match.</h1></div>
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Distribution</p><h1><span class="ln">Qualified products,</span> <span class="ln">delivered with</span> <span class="ln">the paperwork to match.</span></h1></div>
         <div>
           <p class="lead">We represent manufacturers from the United States, the United Kingdom, Europe and India, and supply operators across Saudi Arabia and the wider Gulf.</p>
           <div class="lanes"><span class="sq-route">US <b>→</b> SA</span><span class="sq-route">UK <b>→</b> SA</span><span class="sq-route">EU <b>→</b> SA</span><span class="sq-route">IN <b>→</b> AE</span></div>
@@ -534,7 +535,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap split">
       <div class="head" style="margin:0">
         <p class="sq-eyebrow">For operators</p>
-        <h2>What every delivery includes.</h2>
+        <h2><span class="ln">What every</span> <span class="ln">delivery includes.</span></h2>
       </div>
       <ul class="list">
         <li>Products from qualified original manufacturers</li>
@@ -549,7 +550,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap split">
       <div class="head" style="margin:0">
         <p class="sq-eyebrow">For manufacturers</p>
-        <h2>Want us to represent your products?</h2>
+        <h2><span class="ln">Want us to represent</span> <span class="ln">your products?</span></h2>
       </div>
       <div style="display:grid;gap:var(--space-4);justify-items:start">
         <p class="lead">We import, stock and supply approved products to operators across the Gulf. If you're not yet approved, we start with market entry.</p>
@@ -559,7 +560,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
   </section>
 
   <section class="gr band">
-    <div class="wrap"><h2>Need parts or supplies for your plant?</h2><a class="sq-btn sq-btn--primary" href="#contact">Contact us</a></div>
+    <div class="wrap"><h2><span class="ln">Need parts or supplies</span> <span class="ln">for your plant?</span></h2><a class="sq-btn sq-btn--primary" href="#contact">Contact us</a></div>
   </section>
 </div>
 
@@ -569,7 +570,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <p class="crumb"><a href="#home">Home</a> / Market entry</p>
       <div class="ph-grid">
-        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Market entry</p><h1>Your route into Saudi Arabia and the Gulf.</h1></div>
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Market entry</p><h1><span class="ln">Your route into</span> <span class="ln">Saudi Arabia</span> <span class="ln">and the Gulf.</span></h1></div>
         <div>
           <p class="lead">For manufacturers and service companies from the United States, the United Kingdom, Europe, India and China. We take you from first assessment to approved vendor, local presence and revenue.</p>
           <div class="lanes"><span class="sq-route">US <b>→</b> SA</span><span class="sq-route">UK <b>→</b> SA</span><span class="sq-route">EU <b>→</b> SA</span><span class="sq-route">IN <b>→</b> SA</span><span class="sq-route">CN <b>→</b> SA</span></div>
@@ -583,7 +584,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">Services</p>
-        <h2>Market entry, from strategy to sales.</h2>
+        <h2><span class="ln">Market entry,</span> <span class="ln">from strategy to sales.</span></h2>
       </div>
       <div class="grid3">
         <article class="sq-card"><span class="sq-card__num">Strategy</span><h3 class="sq-card__title">Market entry</h3><p class="sq-card__body">Target operators, demand, competition and the right route to market.</p></article>
@@ -613,7 +614,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
   </section>
 
   <section class="gr band">
-    <div class="wrap"><h2>Ready to supply Gulf operators?</h2><a class="sq-btn sq-btn--primary" href="#contact">Discuss market entry</a></div>
+    <div class="wrap"><h2><span class="ln">Ready to supply</span> <span class="ln">Gulf operators?</span></h2><a class="sq-btn sq-btn--primary" href="#contact">Discuss market entry</a></div>
   </section>
 </div>
 
@@ -623,7 +624,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <p class="crumb"><a href="#home">Home</a> / About</p>
       <div class="ph-grid">
-        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">About Spartiq</p><h1>Built by people who have worked inside the plants.</h1></div>
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">About Spartiq</p><h1><span class="ln">Built by people</span> <span class="ln">who have worked</span> <span class="ln">inside the plants.</span></h1></div>
         <div><p class="lead">Spartiq links Western manufacturers and India's industrial base with Gulf operators.</p></div>
       </div>
     </div>
@@ -638,7 +639,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 
   <section class="gr">
     <div class="wrap">
-      <div class="head"><p class="sq-eyebrow sq-eyebrow--on-graphite">Principles</p><h2>Standards we hold ourselves to.</h2></div>
+      <div class="head"><p class="sq-eyebrow sq-eyebrow--on-graphite">Principles</p><h2><span class="ln">Standards</span> <span class="ln">we hold ourselves to.</span></h2></div>
       <div class="pr">
         <div><h3>Safety</h3><p>Every site, every shift. Zero incidents is the only acceptable record.</p></div>
         <div><h3>Quality</h3><p>Documented, traceable and inspected before anything leaves our hands.</p></div>
@@ -737,7 +738,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <p class="crumb"><a href="#home">Home</a> / Contact</p>
       <div class="ph-grid">
-        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Contact</p><h1>Let's discuss your requirements.</h1></div>
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Contact</p><h1><span class="ln">Let's discuss</span> <span class="ln">your requirements.</span></h1></div>
         <div><p class="lead">Tell us what you need. The right member of our team will respond.</p></div>
       </div>
     </div>
