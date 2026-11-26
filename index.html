@@ -267,11 +267,11 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var
 .locs li::before{content:"";position:absolute;left:2px;top:3px;width:5px;height:14px;background:var(--molten);transform:skewX(var(--slant))}
 @media (max-width:640px){.ct{grid-template-columns:1fr}}
 
-.flock{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-3) var(--space-4)}
+.fcols .flock{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-3) var(--space-4)}
 .flock svg{flex:none}
 .fdiv{width:1px;height:24px;background:var(--graphite-line)}
 .fparent{font:500 12px/16px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--on-graphite-muted)}
-@media (max-width:480px){.fdiv{display:none}.flock{flex-direction:column;align-items:flex-start;gap:var(--space-2)}}
+@media (max-width:480px){.fdiv{display:none}.fcols .flock{flex-direction:column;align-items:flex-start;gap:var(--space-2)}}
 footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;line-height:22px}
 .fcols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:var(--space-8);padding-block:var(--space-12) var(--space-8)}
 .fcols div{display:grid;gap:var(--space-2);align-content:start}
