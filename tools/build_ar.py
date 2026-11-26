@@ -40,6 +40,7 @@ for a, b in JS:
 s = s.replace('<html lang="en">', '<html lang="ar" dir="rtl">', 1)
 s = s.replace('lang="en" hreflang="en" class="on" aria-current="true">EN</a>', 'lang="en" hreflang="en">EN</a>')
 s = s.replace('lang="ar" hreflang="ar">عربي</a>', 'lang="ar" hreflang="ar" class="on" aria-current="true">عربي</a>')
+s = s.replace('<span class="lang-seg">', '<span class="lang-seg" dir="ltr">')
 
 # Arabic typography and right-to-left adjustments
 css = '''

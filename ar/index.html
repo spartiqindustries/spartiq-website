@@ -281,7 +281,14 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 .lang-toggle a+a{border-top:1px solid var(--graphite-line)}
 .lang-toggle a:hover{color:var(--on-graphite)}
 .lang-toggle a.on{background:var(--molten);color:var(--on-molten)}
-@media (max-width:480px){.lang-toggle{top:auto;bottom:16px;transform:none}.lang-toggle a{min-width:42px;padding:10px 8px}}
+#site-nav>li.lang-li{display:none}
+.lang-lbl{font:500 12px/16px var(--font-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--on-graphite-muted)}
+.lang-seg{display:inline-flex;border:1px solid var(--graphite-line)}
+.lang-seg a{display:block;min-width:56px;padding:12px 14px;text-align:center;text-decoration:none;color:var(--on-graphite-muted);font:600 14px/1 "Chakra Petch","IBM Plex Sans Arabic",sans-serif}
+.lang-seg a[lang="ar"]{font:600 16px/1 "IBM Plex Sans Arabic",sans-serif}
+.lang-seg a+a{border-left:1px solid var(--graphite-line)}
+.lang-seg a.on{background:var(--molten);color:var(--on-molten)}
+@media (max-width:1200px){.lang-toggle{display:none}#site-nav>li.lang-li{display:flex;justify-content:space-between;align-items:center;padding:16px 0}}
 /* phone tuning (keep last) */
 @media (max-width:400px){.grid3.ind{grid-template-columns:1fr}}
 @media (max-width:480px){
@@ -332,6 +339,7 @@ h1,h2,h3{line-height:1.25}
       <li><a class="nl" href="#distribution" data-nav="distribution">التوزيع</a></li>
       <li><a class="nl" href="#market-entry" data-nav="market-entry">دخول الأسواق</a></li>
       <li><a class="nl" href="#about" data-nav="about">من نحن</a></li>
+      <li class="lang-li"><span class="lang-lbl">اللغة</span><span class="lang-seg" dir="ltr"><a href="/" data-lang="/" lang="en" hreflang="en">EN</a><a href="/ar/" data-lang="/ar/" lang="ar" hreflang="ar" class="on" aria-current="true">عربي</a></span></li>
     </ul>
     <a class="sq-btn sq-btn--secondary sq-btn--on-graphite" href="#quote" data-nav="quote">اطلب عرض سعر</a>
     <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><i aria-hidden="true"><b></b><b></b><b></b></i><span class="mb-t">القائمة</span></button>
