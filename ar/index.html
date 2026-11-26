@@ -275,14 +275,14 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 .fbase{border-top:1px solid var(--graphite-line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--space-3);padding-block:var(--space-6);font:400 12px/16px var(--font-mono);letter-spacing:.04em;text-transform:uppercase}
 @media (max-width:640px){.fcols{flex-wrap:wrap;gap:var(--space-8)}.fcols>div:first-child{flex:1 1 100%}.fcols>div:not(:first-child){flex:1 1 40%;min-width:0}}
 /* language switch in the header */
-.hl{display:inline-flex;flex:none;border:1px solid var(--graphite-line)}
+.hl{display:inline-flex;flex:none;border:1px solid var(--graphite-line);margin-inline-start:-12px}
 .hl a{display:flex;align-items:center;justify-content:center;min-width:40px;height:36px;padding:0 10px;text-decoration:none;color:var(--on-graphite-muted);font:600 12px/1 "Chakra Petch","IBM Plex Sans Arabic",sans-serif;letter-spacing:.08em}
 .hl a[lang="ar"]{font:600 14px/1 "IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
 .hl a+a{border-left:1px solid var(--graphite-line)}
 .hl a:hover{color:var(--on-graphite)}
 .hl a.on{background:var(--molten);color:var(--on-molten)}
 .q-s{display:none}
-@media (max-width:1200px){.hl{margin-left:auto}.nav .sq-btn{margin-left:0}}
+@media (max-width:1200px){.nav .sq-btn{margin-left:auto}.hl{margin-inline-start:0}}
 @media (max-width:400px){.q-l{display:none}.q-s{display:inline}.hl a{min-width:34px;padding:0 7px}}
 @media (max-width:380px){.nav{gap:8px}.logo svg{width:100px}.nav .sq-btn{padding:9px 9px}.hl a{min-width:32px;padding:0 6px;height:34px}.menu-btn{padding:12px 0 12px 6px}}
 /* phone tuning (keep last) */
@@ -335,8 +335,8 @@ h1,h2,h3{line-height:1.25}
       <li><a class="nl" href="#market-entry" data-nav="market-entry">دخول الأسواق</a></li>
       <li><a class="nl" href="#about" data-nav="about">من نحن</a></li>
     </ul>
-    <span class="hl" dir="ltr" role="group" aria-label="اللغة"><a href="/" data-lang="/" lang="en" hreflang="en">EN</a><a href="/ar/" data-lang="/ar/" lang="ar" hreflang="ar" class="on" aria-current="true">عربي</a></span>
     <a class="sq-btn sq-btn--secondary sq-btn--on-graphite" href="#quote" data-nav="quote"><span class="q-l">اطلب عرض سعر</span><span class="q-s">عرض سعر</span></a>
+    <span class="hl" dir="ltr" role="group" aria-label="اللغة"><a href="/" data-lang="/" lang="en" hreflang="en">EN</a><a href="/ar/" data-lang="/ar/" lang="ar" hreflang="ar" class="on" aria-current="true">عربي</a></span>
     <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><i aria-hidden="true"><b></b><b></b><b></b></i><span class="mb-t">القائمة</span></button>
   </div>
 </header>
