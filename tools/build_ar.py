@@ -6,6 +6,8 @@ from ar_strings import T, CONTEXT, JS
 
 src = open('index.html', encoding='utf-8').read()
 s = src
+# no-wrap helpers are only for English hyphens/phrases; drop them before translating
+s = re.sub(r'<span class="nw">(.*?)</span>', r'\1', s)
 for a, b in CONTEXT:
     s = s.replace(a, b)
 

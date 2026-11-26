@@ -45,6 +45,8 @@ a{color:inherit}
 p{margin:0}
 .wrap{max-width:1248px;margin:0 auto;padding-left:max(24px, env(safe-area-inset-left, 0px));padding-right:max(24px, env(safe-area-inset-right, 0px))}
 .ln{display:inline-block}
+p,.lead,.big,.sq-card__body,li{text-wrap:pretty}
+.nw{white-space:nowrap}
 h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;margin:0;text-wrap:balance}
 .display{font-size:clamp(38px,5.6vw,68px);line-height:1;font-weight:700;letter-spacing:.01em}
 h1{font-size:clamp(30px,4.2vw,46px);line-height:1.06;font-weight:700;letter-spacing:.01em}
@@ -211,7 +213,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var
 
 /* CTA band */
 .band .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-6)}
-.band h2{max-width:24ch}
+.band h2{max-width:32ch}
 
 /* RFQ */
 .rfq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-12);align-items:start}
@@ -281,6 +283,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 .lang-toggle a.on{background:var(--molten);color:var(--on-molten)}
 @media (max-width:480px){.lang-toggle{top:auto;bottom:16px;transform:none}.lang-toggle a{min-width:42px;padding:10px 8px}}
 /* phone tuning (keep last) */
+@media (max-width:400px){.grid3.ind{grid-template-columns:1fr}}
 @media (max-width:480px){
   .display{font-size:30px;line-height:1.05}
   h1{font-size:28px}
@@ -290,6 +293,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
   .locs li{white-space:normal;font-size:13px;letter-spacing:.04em}
   .ct .sq-card{padding:var(--space-6)}
 }
+@media (max-width:380px){.display{font-size:27px}h2{font-size:20px}h1{font-size:26px}}
 
 /* ===== Arabic / RTL ===== */
 :root{--font-display:"IBM Plex Sans Arabic","Chakra Petch",sans-serif;--font-sans:"IBM Plex Sans Arabic","IBM Plex Sans",sans-serif;--font-mono:"IBM Plex Sans Arabic","IBM Plex Mono",monospace}
@@ -396,7 +400,7 @@ h1,h2,h3{line-height:1.25}
     <div class="wrap">
       <div class="head">
         <p class="sq-eyebrow">القطاعات</p>
-        <h2><span class="ln">مصمَّمون</span> <span class="ln">للأعمال الثقيلة والخاضعة للتنظيم.</span></h2>
+        <h2><span class="ln">مصمَّمون للأعمال</span> <span class="ln">الثقيلة والخاضعة للتنظيم.</span></h2>
       </div>
       <div class="grid3 ind">
         <div class="sq-card"><h3 class="sq-card__title">النفط والغاز والبتروكيماويات</h3></div>
@@ -501,7 +505,7 @@ h1,h2,h3{line-height:1.25}
     <div class="wrap">
       <p class="crumb"><a href="#home">الرئيسية</a> / الخدمات الصناعية</p>
       <div class="ph-grid">
-        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">الخدمات الصناعية</p><h1><span class="ln">نحافظ على المصانع العاملة</span> <span class="ln">آمنة وفي حالة تشغيل</span> <span class="ln">وضمن الجدول الزمني.</span></h1></div>
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">الخدمات الصناعية</p><h1><span class="ln">نحافظ على المصانع</span> <span class="ln">العاملة آمنة وفي حالة تشغيل</span> <span class="ln">وضمن الجدول الزمني.</span></h1></div>
         <div><p class="lead">خدمات ميدانية للمصافي ومصانع البتروكيماويات ومحطات الكهرباء والمياه، مخطّطة وفق جدول الصيانة لديك ومنفّذة بمعيار صفر حوادث.</p><a class="sq-btn sq-btn--primary" href="#contact">خطّط لأعمال التوقف</a></div>
       </div>
     </div>

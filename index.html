@@ -45,6 +45,8 @@ a{color:inherit}
 p{margin:0}
 .wrap{max-width:1248px;margin:0 auto;padding-left:max(24px, env(safe-area-inset-left, 0px));padding-right:max(24px, env(safe-area-inset-right, 0px))}
 .ln{display:inline-block}
+p,.lead,.big,.sq-card__body,li{text-wrap:pretty}
+.nw{white-space:nowrap}
 h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;margin:0;text-wrap:balance}
 .display{font-size:clamp(38px,5.6vw,68px);line-height:1;font-weight:700;letter-spacing:.01em}
 h1{font-size:clamp(30px,4.2vw,46px);line-height:1.06;font-weight:700;letter-spacing:.01em}
@@ -211,7 +213,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var
 
 /* CTA band */
 .band .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--space-6)}
-.band h2{max-width:24ch}
+.band h2{max-width:32ch}
 
 /* RFQ */
 .rfq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--space-12);align-items:start}
@@ -281,6 +283,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 .lang-toggle a.on{background:var(--molten);color:var(--on-molten)}
 @media (max-width:480px){.lang-toggle{top:auto;bottom:16px;transform:none}.lang-toggle a{min-width:42px;padding:10px 8px}}
 /* phone tuning (keep last) */
+@media (max-width:400px){.grid3.ind{grid-template-columns:1fr}}
 @media (max-width:480px){
   .display{font-size:30px;line-height:1.05}
   h1{font-size:28px}
@@ -290,6 +293,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
   .locs li{white-space:normal;font-size:13px;letter-spacing:.04em}
   .ct .sq-card{padding:var(--space-6)}
 }
+@media (max-width:380px){.display{font-size:27px}h2{font-size:20px}h1{font-size:26px}}
 </style>
 </head>
 <body>
@@ -375,10 +379,10 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
         <h2><span class="ln">Built for</span> <span class="ln">heavy, regulated work.</span></h2>
       </div>
       <div class="grid3 ind">
-        <div class="sq-card"><h3 class="sq-card__title">Oil, gas &amp; petrochemicals</h3></div>
-        <div class="sq-card"><h3 class="sq-card__title">Power &amp; water</h3></div>
-        <div class="sq-card"><h3 class="sq-card__title">Metals &amp; mining</h3></div>
-        <div class="sq-card"><h3 class="sq-card__title">Heavy equipment &amp; machinery</h3></div>
+        <div class="sq-card"><h3 class="sq-card__title"><span class="nw">Oil, gas</span> <span class="nw">&amp; petrochemicals</span></h3></div>
+        <div class="sq-card"><h3 class="sq-card__title"><span class="nw">Power &amp; water</span></h3></div>
+        <div class="sq-card"><h3 class="sq-card__title"><span class="nw">Metals &amp; mining</span></h3></div>
+        <div class="sq-card"><h3 class="sq-card__title"><span class="nw">Heavy equipment</span> <span class="nw">&amp; machinery</span></h3></div>
         <div class="sq-card"><h3 class="sq-card__title">Automotive</h3></div>
         <div class="sq-card"><h3 class="sq-card__title">Healthcare</h3></div>
       </div>
@@ -477,8 +481,8 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
     <div class="wrap">
       <p class="crumb"><a href="#home">Home</a> / Industrial services</p>
       <div class="ph-grid">
-        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Industrial services</p><h1><span class="ln">Keeping operating plants</span> <span class="ln">safe, online</span> <span class="ln">and on schedule.</span></h1></div>
-        <div><p class="lead">Field services for refineries, petrochemical, power and water plants, planned around your maintenance calendar and delivered to a zero-harm standard.</p><a class="sq-btn sq-btn--primary" href="#contact">Plan a shutdown</a></div>
+        <div><p class="sq-eyebrow sq-eyebrow--on-graphite">Industrial services</p><h1><span class="ln">Keeping operating</span> <span class="ln">plants safe, online</span> <span class="ln">and on schedule.</span></h1></div>
+        <div><p class="lead">Field services for refineries, petrochemical, power and water plants, planned around your maintenance calendar and delivered to a <span class="nw">zero-harm</span> standard.</p><a class="sq-btn sq-btn--primary" href="#contact">Plan a shutdown</a></div>
       </div>
     </div>
   </section>
@@ -492,7 +496,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
       <div class="grid3">
         <article class="sq-card"><span class="sq-card__num">Valves</span><h3 class="sq-card__title">Valve repair and testing</h3><p class="sq-card__body">Overhaul, pressure testing and calibration of process and safety valves.</p></article>
         <article class="sq-card"><span class="sq-card__num">On-stream</span><h3 class="sq-card__title">Leak sealing and hot tapping</h3><p class="sq-card__body">Repairs and tie-ins carried out while the plant stays in service.</p></article>
-        <article class="sq-card"><span class="sq-card__num">Heat treatment</span><h3 class="sq-card__title">Post-weld heat treatment</h3><p class="sq-card__body">On-site stress relieving and controlled heating for welded equipment.</p></article>
+        <article class="sq-card"><span class="sq-card__num">Heat treatment</span><h3 class="sq-card__title"><span class="nw">Post-weld</span> <span class="nw">heat treatment</span></h3><p class="sq-card__body">On-site stress relieving and controlled heating for welded equipment.</p></article>
         <article class="sq-card"><span class="sq-card__num">Inspection</span><h3 class="sq-card__title">NDT and weld inspection</h3><p class="sq-card__body">Radiographic, ultrasonic, magnetic particle, penetrant and visual testing.</p></article>
         <article class="sq-card"><span class="sq-card__num">Rotating equipment</span><h3 class="sq-card__title">Pumps and motors</h3><p class="sq-card__body">Pump testing and calibration, motor rewinding and mechanical repair.</p></article>
         <article class="sq-card"><span class="sq-card__num">Turnarounds</span><h3 class="sq-card__title">Shutdown support</h3><p class="sq-card__body">Skilled crews, fabrication and painting for planned turnarounds.</p></article>
@@ -517,7 +521,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
   </section>
 
   <section class="gr band">
-    <div class="wrap"><h2><span class="ln">Planning a turnaround</span> <span class="ln">or need on-stream support?</span></h2><a class="sq-btn sq-btn--primary" href="#contact">Contact us</a></div>
+    <div class="wrap"><h2><span class="ln">Planning a turnaround</span> <span class="ln">or need <span class="nw">on-stream</span> support?</span></h2><a class="sq-btn sq-btn--primary" href="#contact">Contact us</a></div>
   </section>
 </div>
 
@@ -546,8 +550,8 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
       <div class="grid3">
         <article class="sq-card"><span class="sq-card__num">Flow control</span><h3 class="sq-card__title">Valves and valve spares</h3><p class="sq-card__body">Process, control and safety valves with trims and spare parts.</p></article>
         <article class="sq-card"><span class="sq-card__num">Sealing</span><h3 class="sq-card__title">Gaskets and sealing</h3><p class="sq-card__body">Spiral wound, ring joint, kammprofile and sheet gaskets.</p></article>
-        <article class="sq-card"><span class="sq-card__num">Repair</span><h3 class="sq-card__title">Leak-sealing products</h3><p class="sq-card__body">Sealing compounds, enclosures and clamps for on-stream repair.</p></article>
-        <article class="sq-card"><span class="sq-card__num">Integrity</span><h3 class="sq-card__title">Heat-treatment and inspection supplies</h3><p class="sq-card__body">Equipment and consumables for heat treatment and NDT.</p></article>
+        <article class="sq-card"><span class="sq-card__num">Repair</span><h3 class="sq-card__title"><span class="nw">Leak-sealing</span> products</h3><p class="sq-card__body">Sealing compounds, enclosures and clamps for on-stream repair.</p></article>
+        <article class="sq-card"><span class="sq-card__num">Integrity</span><h3 class="sq-card__title"><span class="nw">Heat-treatment</span> and inspection supplies</h3><p class="sq-card__body">Equipment and consumables for heat treatment and NDT.</p></article>
         <article class="sq-card"><span class="sq-card__num">Spares</span><h3 class="sq-card__title">Pump, electrical and motor spares</h3><p class="sq-card__body">Critical spares sourced from qualified original manufacturers.</p></article>
         <article class="sq-card"><span class="sq-card__num">Turnarounds</span><h3 class="sq-card__title">Shutdown kitting</h3><p class="sq-card__body">Materials kitted and documented ahead of planned shutdowns.</p></article>
       </div>
@@ -662,7 +666,7 @@ footer{background:var(--graphite);color:var(--on-graphite-muted);font-size:14px;
 
   <section class="gr">
     <div class="wrap">
-      <div class="head"><p class="sq-eyebrow sq-eyebrow--on-graphite">Principles</p><h2><span class="ln">Standards</span> <span class="ln">we hold ourselves to.</span></h2></div>
+      <div class="head"><p class="sq-eyebrow sq-eyebrow--on-graphite">Principles</p><h2><span class="ln">Standards we hold</span> <span class="ln">ourselves to.</span></h2></div>
       <div class="pr">
         <div><h3>Safety</h3><p>Every site, every shift. Zero incidents is the only acceptable record.</p></div>
         <div><h3>Quality</h3><p>Documented, traceable and inspected before anything leaves our hands.</p></div>
