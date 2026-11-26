@@ -40,13 +40,13 @@ for a, b in JS:
 s = s.replace('<html lang="en">', '<html lang="ar" dir="rtl">', 1)
 s = s.replace('lang="en" hreflang="en" class="on" aria-current="true">EN</a>', 'lang="en" hreflang="en">EN</a>')
 s = s.replace('lang="ar" hreflang="ar">عربي</a>', 'lang="ar" hreflang="ar" class="on" aria-current="true">عربي</a>')
-s = s.replace('<span class="lang-seg">', '<span class="lang-seg" dir="ltr">')
+s = s.replace('<span class="hl" role="group"', '<span class="hl" dir="ltr" role="group"')
 
 # Arabic typography and right-to-left adjustments
 css = '''
 /* ===== Arabic / RTL ===== */
 :root{--font-display:"IBM Plex Sans Arabic","Chakra Petch",sans-serif;--font-sans:"IBM Plex Sans Arabic","IBM Plex Sans",sans-serif;--font-mono:"IBM Plex Sans Arabic","IBM Plex Mono",monospace}
-html[lang="ar"] body *:not(.lang-toggle a[lang="en"]){letter-spacing:0!important;text-transform:none!important}
+html[lang="ar"] body *:not(.hl a[lang="en"]){letter-spacing:0!important;text-transform:none!important}
 .sq-route,.sq-card__spec code,.spec code,.ct .mail{direction:ltr;unicode-bidi:isolate}
 .logo,footer svg{direction:ltr}
 .hero canvas{transform:scaleX(-1)}
@@ -63,7 +63,6 @@ html[lang="ar"] body *:not(.lang-toggle a[lang="en"]){letter-spacing:0!important
 h1,h2,h3{line-height:1.25}
 .display{line-height:1.2}
 .big{line-height:1.7}
-.lang-toggle{right:auto;left:0;border-right:1px solid var(--graphite-line);border-left:0}
 .nav a.nl{font-size:15px}
 .nav .sq-btn,.sq-btn{font-size:15px}
 .sq-eyebrow,.crumb,.sq-card__num,.flow .n,.fparent,.fbase,.fcols .t,.hero .meta{font-size:13px}

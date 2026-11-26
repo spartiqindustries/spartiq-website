@@ -6,6 +6,7 @@ T = {
 "Spartiq | Contract manufacturing, industrial services, distribution and consulting": "Spartiq | التصنيع التعاقدي والخدمات الصناعية والتوزيع ودخول الأسواق",
 "Spartiq home": "الصفحة الرئيسية لـ Spartiq",
 "Language": "اللغة",
+"Quote": "عرض سعر",
 "Oil, gas & petrochemicals": "النفط والغاز والبتروكيماويات",
 "Heavy equipment & machinery": "المعدات والآلات الثقيلة",
 "Post-weld heat treatment": "المعالجة الحرارية بعد اللحام",
